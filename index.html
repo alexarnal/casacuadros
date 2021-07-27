@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Profiles</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href="OpenSans.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+<style>
+body, h1, h2, h3, h4, h5 {
+  font-family: "Open Sans", monospace
+}
+.w3-top{position:sticky}
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 0px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 0px;
+}
+
+.column img {
+  margin-top: 0px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1000px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+.divModal {
+  position:absolute;
+  height: 100%;
+  width:100%;
+  display:none;
+  
+}
+  
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+  
+</style>
+<body>
+
+<!-- Header -->
+<div class="w3-top{position:relative} w3-white">
+  <!--
+  <div style="padding-top:100px" class="w3-center w3-xxxlarge">
+    <h1>Cuadros</h1>
+  </div>
+  -->
+  <div style="padding:100px" class="w3-center">
+    <img src="images/casacuadros/logo.svg" height="400" width="400">
+  </div>
+  <div style="padding-bottom:100px" class="w3-center">
+    <h2>Find your next photographer<br>here in El Paso, TX</h2>
+    <!--<a class="w3-center w3-button w3-white">Filter</a>-->
+  </div>
+</div>
+
+<div class="w3-white w3-container"><hr></div>
+
+    <div id="photographers">
+      <!-- put content here-->
+    </div>
+  
+<div class="w3-white w3-container"><hr></div>
+ 
+<div class="w3-bottom{position:relative} w3-white">
+  <div style="padding:16px" class="w3-center">
+    <h3>Made by El Pasoans for El Pasoans</h3>
+    <!--<a class="w3-center w3-button w3-white">Filter</a>-->
+  </div>
+  <div style="padding:20px" class="w3-center">
+    <h5>Are you a photographer?</h5>
+    <a class="w3-button" href="mailto:alex51195@gmail.com?subject=Space Request">Request Space</a>
+    <!--<a class="w3-center w3-button w3-white">Filter</a>-->
+  </div>
+</div>
+
+<div class="w3-white w3-container"><hr></div>
+ 
+<div class="w3-bottom{position:relative} w3-white w3-container" style="padding-bottom:16px">
+  <div class="w3-left">
+    <a style="color:darkgray;">© 2021 Cuadros. All rights reserved.</a>
+    <!--<a class="w3-center w3-button w3-white">Filter</a>-->
+  </div>
+
+</div>
+  
+    <script defer>
+      //From: https://www.youtube.com/watch?v=mLL5pdIbqWc&list=PLyuRouwmQCjkWu63mHksI9EA4fN-vwGs7&index=33
+      //Run the script after loading DOM
+      let url = "/json/photographers.json";
+      let xhr = new XMLHttpRequest();
+      xhr.open("GET", url, true);
+      //let fd = new FormData();
+      //fd.append("firstName", "Jesse");
+      //fd.append("lastName", "Custer");
+
+      xhr.onreadystatechange = function(ev) {
+        //2 - request sent, 3 - something back, 4 - full response
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+          switch (xhr.status) {
+            case 200:
+            case 304:
+              console.log("OK or Not Modified (cached)", xhr.status);
+              outputUsers(xhr.responseText); //responseXML
+              break;
+            case 201:
+              console.log("Created", xhr.status);
+              let photographer = document.querySelector("div");
+              photographer.textContent = xhr.responseText;
+              break;
+            case 403:
+            case 401:
+              console.log("Not Authorized or Forbidden", xhr.status);
+              break;
+            case 404:
+              console.log("Not Found", xhr.status);
+              break;
+            case 500:
+              console.log("Server Side Error", xhr.status);
+              break;
+            default:
+              console.log("Some other code: ", xhr.status, xhr.status);
+          }
+        }
+      };
+
+      xhr.onerror = function(err) {
+        console.warn(err);
+      };
+      xhr.send();
+
+      function outputUsers(str) {
+        let data = JSON.parse(str);
+        let photographers = document.getElementById("photographers");
+        data.forEach(item => {
+          let div = document.createElement("div");
+          div.classList.add("w3-container");
+          //Header
+          let shortHeader = document.createElement("header");
+          shortHeader.classList = "w3-container w3-top w3-white w3-padding-16 ";
+          shortHeader.id = "shortHeader"+item.id
+          let a1 = document.createElement("a");
+          a1.classList = "w3-left w3-padding w3-xlarge";
+          a1.textContent=item.name;
+          shortHeader.appendChild(a1);
+          //Modal Trigger
+          let a2 = document.createElement("a");
+          a2.classList = "w3-right w3-button w3-white w3-xlarge";
+          a2.onclick= function(){document.getElementById('longHeader'+item.id).style.display='block';
+                                document.getElementById('shortHeader'+item.id).style.display='none'};
+          a2.textContent="☰";
+          shortHeader.appendChild(a2);
+          div.appendChild(shortHeader);
+          
+          let longHeader = document.createElement("header");
+          longHeader.classList = "w3-container w3-top w3-white w3-padding-16 ";
+          longHeader.id = "longHeader"+item.id
+          longHeader.style.display="none"
+          let a3 = document.createElement("a");
+          a3.classList = "w3-left w3-padding w3-xlarge";
+          a3.textContent=item.name;
+          longHeader.appendChild(a3);
+          //Modal Trigger
+          let a4 = document.createElement("a");
+          a4.classList = "w3-right w3-button w3-white w3-xlarge";
+          a4.onclick= function(){document.getElementById('shortHeader'+item.id).style.display='block';
+                                document.getElementById('longHeader'+item.id).style.display='none'};
+          a4.textContent="×";
+          longHeader.appendChild(a4);
+          let divModal1 = document.createElement("div");
+          divModal1.classList = "w3-container";
+          let pModal2 = document.createElement("p");
+          pModal2.textContent=item.address.street;
+          divModal1.appendChild(pModal2);
+          let pModal3 = document.createElement("p");
+          pModal3.textContent=item.phone;
+          divModal1.appendChild(pModal3);
+          let pModal4 = document.createElement("p");
+          pModal4.textContent=item.website;
+          divModal1.appendChild(pModal4);
+          let pModal5 = document.createElement("p");
+          pModal5.textContent=item.email;
+          divModal1.appendChild(pModal5);
+          longHeader.appendChild(divModal1);
+          div.appendChild(longHeader);
+          
+          //Modal
+          /*let divModal1 = document.createElement("div");
+          divModal1.classList = "divModal";
+          divModal1.id = "modal"+item.id;
+          let divModal2 = document.createElement("div");
+          let divModal3 = document.createElement("div");
+          divModal3.classList = "w3-container";
+          let spanModal1 = document.createElement("span");
+          spanModal1.classList = "w3-closebtn";
+          spanModal1.onclick=function(){document.getElementById('modal'+item.id).style.display='none'};
+          spanModal1.textContent="×";
+          divModal3.appendChild(spanModal1);
+          let pModal1 = document.createElement("p");
+          pModal1.textContent=item.name;
+          divModal3.appendChild(pModal1);
+          let pModal2 = document.createElement("p");
+          pModal2.textContent=item.address.street;
+          divModal3.appendChild(pModal2);
+          let pModal3 = document.createElement("p");
+          pModal3.textContent=item.phone;
+          divModal3.appendChild(pModal3);
+          let pModal4 = document.createElement("p");
+          pModal4.textContent=item.website;
+          divModal3.appendChild(pModal4);
+          divModal2.appendChild(divModal3);
+          divModal1.appendChild(divModal2);
+          div.appendChild(divModal1);*/
+          //End Modal
+          
+          //End Header
+          //First Row
+          let div1 = document.createElement("div");
+          div1.classList.add("row");
+          //First Column
+          let div2 = document.createElement("div");
+          div2.classList.add("column");
+          let img1 = document.createElement("img");
+          img1.style = "width:100%";
+          img1.src = "images/"+item.username+"/"+item.files.one;
+          div2.appendChild(img1);
+          let div3 = document.createElement("div");
+          div3.classList = "w3-hide-medium w3-hide-small";
+          let img2 = document.createElement("img");
+          img2.style = "width:100%";
+          img2.src = "images/"+item.username+"/"+item.files.two;
+          div3.appendChild(img2);
+          div2.appendChild(div3);
+          div1.appendChild(div2);
+          //Second Column
+          let div4 = document.createElement("div");
+          div4.classList.add("column");
+          let img3 = document.createElement("img");
+          img3.style = "width:100%";
+          img3.src = "images/"+item.username+"/"+item.files.three;
+          div4.appendChild(img3);
+          let div5 = document.createElement("div");
+          div5.classList = "w3-hide-medium w3-hide-small";
+          let img4 = document.createElement("img");
+          img4.style = "width:100%";
+          img4.src = "images/"+item.username+"/"+item.files.four;
+          div5.appendChild(img4);
+          div4.appendChild(div5);
+          div1.appendChild(div4);
+          //Third Column
+          let div6 = document.createElement("div");
+          div6.classList.add("column");
+          let img5 = document.createElement("img");
+          img5.style = "width:100%";
+          img5.src = "images/"+item.username+"/"+item.files.five;
+          div6.appendChild(img5);
+          let div7 = document.createElement("div");
+          div7.classList = "w3-hide-medium w3-hide-small";
+          let img6 = document.createElement("img");
+          img6.style = "width:100%";
+          img6.src = "images/"+item.username+"/"+item.files.six;
+          div7.appendChild(img6);
+          div6.appendChild(div7);
+          div1.appendChild(div6);
+          //Fourth Column
+          let div8 = document.createElement("div");
+          div8.classList.add("column");
+          let img7= document.createElement("img");
+          img7.style = "width:100%";
+          img7.src = "images/"+item.username+"/"+item.files.seven;
+          div8.appendChild(img7);
+          let div9 = document.createElement("div");
+          div9.classList = "w3-hide-medium w3-hide-small";
+          let img8 = document.createElement("img");
+          img8.style = "width:100%";
+          img8.src = "images/"+item.username+"/"+item.files.eight;
+          div9.appendChild(img8);
+          div8.appendChild(div9);
+          div1.appendChild(div8);
+          div.appendChild(div1);
+          photographers.appendChild(div);
+        });
+      }
+    </script>
+  </body>
+</html>

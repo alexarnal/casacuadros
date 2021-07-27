@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Arnal Studio",
+    "username": "arnalstudio",
+    "email": "arnalstudioep@gmail.com",
+    "address": {
+      "street": "8771 Plains Dr",
+      "suite": "",
+      "city": "El Paso",
+      "zipcode": "79907-0000"
+    },
+    "phone": "(915) 859-1196",
+    "website": "arnalphoto.com",
+    "company": "",
+    "files": {
+      "one":"1s.jpg",
+      "two":"4s.jpg",
+      "three":"3s.jpg",
+      "four":"6s.jpg",
+      "five":"2s.jpg",
+      "six":"5s.jpg",
+      "seven":"8s.jpg",
+      "eight":"7s.jpg"
+    }
+  }  
+]
