@@ -14,14 +14,14 @@
     "website": "casadecuadros.com",
     "company": "",
     "files": {
-      "one":"1s.jpg",
-      "two":"4s.jpg",
-      "three":"3s.jpg",
-      "four":"6s.jpg",
-      "five":"2s.jpg",
-      "six":"5s.jpg",
-      "seven":"8s.jpg",
-      "eight":"7s.jpg"
+      "one":"1.svg",
+      "two":"2.svg",
+      "three":"3.svg",
+      "four":"4.svg",
+      "five":"5.svg",
+      "six":"6.svg",
+      "seven":"7.svg",
+      "eight":"8.svg"
     }
   }, 
   {
@@ -39,14 +39,14 @@
     "website": "",
     "company": "instagram.com",
     "files": {
-      "one":"1s.jpg",
-      "two":"4s.jpg",
-      "three":"3s.jpg",
-      "four":"6s.jpg",
-      "five":"2s.jpg",
-      "six":"5s.jpg",
-      "seven":"8s.jpg",
-      "eight":"7s.jpg"
+      "one":"1.svg",
+      "two":"2.svg",
+      "three":"3.svg",
+      "four":"4.svg",
+      "five":"5.svg",
+      "six":"6.svg",
+      "seven":"7.svg",
+      "eight":"8.svg"
     }
   } , 
   {
@@ -64,14 +64,14 @@
     "website": "",
     "company": "",
     "files": {
-      "one":"1s.jpg",
-      "two":"4s.jpg",
-      "three":"3s.jpg",
-      "four":"6s.jpg",
-      "five":"2s.jpg",
-      "six":"5s.jpg",
-      "seven":"8s.jpg",
-      "eight":"7s.jpg"
+      "one":"1.svg",
+      "two":"2.svg",
+      "three":"3.svg",
+      "four":"4.svg",
+      "five":"5.svg",
+      "six":"6.svg",
+      "seven":"7.svg",
+      "eight":"8.svg"
     }
   } 
 ]
