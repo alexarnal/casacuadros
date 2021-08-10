@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "name": "Person 1",
+    "username": "casacuadros",
+    "email": "address@mail.com",
+    "address": {
+      "street": "123 Main St",
+      "suite": "",
+      "city": "El Paso",
+      "zipcode": "79907-0000"
+    },
+    "phone": "9155555555",
+    "website": "casadecuadros.com",
+    "company": "",
+    "files": {
+      "one":"1s.jpg",
+      "two":"4s.jpg",
+      "three":"3s.jpg",
+      "four":"6s.jpg",
+      "five":"2s.jpg",
+      "six":"5s.jpg",
+      "seven":"8s.jpg",
+      "eight":"7s.jpg"
+    }
+  }, 
+  {
+    "id": 2,
+    "name": "Person 2",
+    "username": "casacuadros",
+    "email": "",
+    "address": {
+      "street": "123 Main St",
+      "suite": "",
+      "city": "El Paso",
+      "zipcode": "79907-0000"
+    },
+    "phone": "9155555555",
+    "website": "",
+    "company": "instagram.com",
+    "files": {
+      "one":"1s.jpg",
+      "two":"4s.jpg",
+      "three":"3s.jpg",
+      "four":"6s.jpg",
+      "five":"2s.jpg",
+      "six":"5s.jpg",
+      "seven":"8s.jpg",
+      "eight":"7s.jpg"
+    }
+  } , 
+  {
+    "id": 3,
+    "name": "Person 3",
+    "username": "casacuadros",
+    "email": "address@mail.com",
+    "address": {
+      "street": "",
+      "suite": "",
+      "city": "El Paso",
+      "zipcode": "79907-0000"
+    },
+    "phone": "",
+    "website": "",
+    "company": "",
+    "files": {
+      "one":"1s.jpg",
+      "two":"4s.jpg",
+      "three":"3s.jpg",
+      "four":"6s.jpg",
+      "five":"2s.jpg",
+      "six":"5s.jpg",
+      "seven":"8s.jpg",
+      "eight":"7s.jpg"
+    }
+  } 
+]
