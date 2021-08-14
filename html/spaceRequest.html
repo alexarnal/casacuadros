@@ -209,32 +209,40 @@ body, h1, h2, h3, h4, h5 {
     <form target="_blank" style="border: 2px solid #ccc" action="https://formsubmit.co/alex51195@gmail.com" method="POST">
       <div class="w3-container">
       
-      <h4>Contact</h4>
-      <div class="w3-container " style="padding-bottom: 16px">
-        <input type="text" name="name" class="form-control" placeholder="Full Name" required>* <br>
-        <input type="text" name="email" class="form-control" placeholder="Email Address" required>* <br>
-        <input type="text" name="company" class="form-control" placeholder="Company"> <br>
-        <input type="text" name="address" class="form-control" placeholder="Address"> <br>
-        <input type="text" name="phone" class="form-control" placeholder="Phone"> <br>
-        <input type="text" name="instagram" class="form-control" placeholder="Instagram"> <br>
-        <input type="text" name="facebook" class="form-control" placeholder="Facebook"> <br>
-        <input type="text" name="twiiter" class="form-control" placeholder="Twitter"> <br>
-      </div>
-      
-      <h4>Images *</h4>
-      <div class="w3-container" style="padding-bottom: 16px">
-        1. <input type="image" name="im1" class="form-control" required> <br>
-        2. <input type="image" name="im2" class="form-control" required> <br>
-        3. <input type="image" name="im3" class="form-control" required> <br>
-        4. <input type="image" name="im4" class="form-control" required> <br>
-        5. <input type="image" name="im5" class="form-control" required> <br>
-        6. <input type="image" name="im6" class="form-control" required> <br>
-        7. <input type="image" name="im7" class="form-control" required> <br>
-        8. <input type="image" name="im8" class="form-control" required> <br>
-        <input  type="checkbox" name="randomize" class="form-control"> Randomize order <br>
-      </div>
+        <div class="w3-container">
+          <div style=" float:left">
+            <h4>Contact</h4>
+            <div class="w3-container" style="padding-bottom: 16px">
+              <input type="text" name="name" class="form-control" placeholder="Full Name" required>* <br>
+              <input type="text" name="email" class="form-control" placeholder="Email Address" required>* <br>
+              <input type="text" name="company" class="form-control" placeholder="Company"> <br>
+              <input type="text" name="address" class="form-control" placeholder="Address"> <br>
+              <input type="text" name="phone" class="form-control" placeholder="Phone"> <br>
+              <input type="text" name="instagram" class="form-control" placeholder="Instagram"> <br>
+              <input type="text" name="facebook" class="form-control" placeholder="Facebook"> <br>
+              <input type="text" name="twiiter" class="form-control" placeholder="Twitter"> <br>
+            </div>
+          </div>
+          <div style=" float:right">
+            <h4>Images *</h4>
+            <div class="w3-container" style="padding-bottom: 16px">
+              1. <input type="file" name="im1" class="form-control" required> <br>
+              2. <input type="file" name="im2" class="form-control" required> <br>
+              3. <input type="file" name="im3" class="form-control" required> <br>
+              4. <input type="file" name="im4" class="form-control" required> <br>
+              5. <input type="file" name="im5" class="form-control" required> <br>
+              6. <input type="file" name="im6" class="form-control" required> <br>
+              7. <input type="file" name="im7" class="form-control" required> <br>
+              8. <input type="file" name="im8" class="form-control" required> <br>
+              <input  type="checkbox" name="randomize" class="form-control"> Randomize order <br>
+            </div>
+          </div>
+
+        </div>
         
-      <div style="padding-bottom: 16px">
+        <hr style="margin:16px;border-top: 1px solid #ccc">
+        
+      <div style="padding-bottom: 16px; margin: auto">
         <input  type="checkbox" name="consent" class="form-control" placeholder="Twitter" required> 
         I accept the <u onclick="document.getElementById('terms&conditions').style.display='block';">Terms &amp; Conditions</u>.  <br>
         
