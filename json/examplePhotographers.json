@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Person 1",
+    "name": "Name/Logo",
     "username": "casacuadros",
     "email": "address@mail.com",
     "address": {
@@ -26,7 +26,7 @@
   }, 
   {
     "id": 2,
-    "name": "Person 2",
+    "name": "Name/Logo",
     "username": "casacuadros",
     "email": "",
     "address": {
@@ -51,7 +51,7 @@
   } , 
   {
     "id": 3,
-    "name": "Person 3",
+    "name": "Name/Logo",
     "username": "casacuadros",
     "email": "address@mail.com",
     "address": {
