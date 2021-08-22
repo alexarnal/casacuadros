@@ -285,38 +285,38 @@ body, h1, h2, h3, h4, h5 {
     <input type="text" name="name" class="form-control" style="width:100%" placeholder="First & Last or Company Name" required>
     <label for="email">Email Address*</label>
     <input type="text" name="email" class="form-control" style="width:100%" placeholder="email@domain.tld" required>
-    <label for="company">Address</label>
+    <label for="address">Address</label>
     <input type="text" name="address" class="form-control" style="width:100%" placeholder="123 Main, El Paso TX 79999">
-    <label for="company">Phone Number</label>
+    <label for="phone">Phone Number</label>
     <input type="text" name="phone" class="form-control" style="width:100%" placeholder="(915)  • • •  -  • • • •">
-    <label for="company">Website</label>
-    <input type="text" name="company" class="form-control" style="width:100%" placeholder="domain.tld">
-    <label for="company">Instagram</label>
+    <label for="website">Website</label>
+    <input type="text" name="website" class="form-control" style="width:100%" placeholder="domain.tld">
+    <label for="instagram">Instagram</label>
     <input type="text" name="instagram" class="form-control" style="width:100%" placeholder="instagram.com/yourusername">
-    <label for="company">Facebook</label>
+    <label for="facebook">Facebook</label>
     <input type="text" name="facebook" class="form-control" style="width:100%" placeholder="facebook.com/yourusername">
-    <label for="company">Twitter</label>
+    <label for="twitter">Twitter</label>
     <input type="text" name="twiiter" class="form-control" style="width:100%" placeholder="twitter.com/yourusername">
-    <label for="company">Logo <a style="font-size: 9px">(max size: 25MB)</a></label>
+    <label for="logo">Logo <a style="font-size: 9px">(max size: 25MB)</a></label>
     <input type="file" accept="image/png, image/jpeg" name="logo" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required> 
     <input  type="checkbox" class="form-control"> Display logo instead of name
     <br><br><br>
     <h4>Your Work</h4>
-    <label for="company">Image 1* <a style="font-size: 9px">(max size: 25MB)</a></label>
+    <label for="im1">Image 1* <a style="font-size: 9px">(max size: 25MB)</a></label>
     <input type="file" accept="image/png, image/jpeg" name="im1" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
-    <label for="company">Image 2* <a style="font-size: 9px">(max size: 25MB)</a></label>
+    <label for="im2">Image 2* <a style="font-size: 9px">(max size: 25MB)</a></label>
     <input type="file" accept="image/png, image/jpeg" name="im2" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
-    <label for="company">Image 3* <a style="font-size: 9px">(max size: 25MB)</a></label>
+    <label for="im3">Image 3* <a style="font-size: 9px">(max size: 25MB)</a></label>
     <input type="file" accept="image/png, image/jpeg" name="im3" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
-    <label for="company">Image 4* <a style="font-size: 9px">(max size: 25MB)</a></label>
+    <label for="im4">Image 4* <a style="font-size: 9px">(max size: 25MB)</a></label>
     <input type="file" accept="image/png, image/jpeg" name="im4" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
-    <label for="company">Image 5* <a style="font-size: 9px">(max size: 25MB)</a></label>
+    <label for="im5">Image 5* <a style="font-size: 9px">(max size: 25MB)</a></label>
     <input type="file" accept="image/png, image/jpeg" name="im5" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
-    <label for="company">Image 6* <a style="font-size: 9px">(max size: 25MB)</a></label>
+    <label for="im6">Image 6* <a style="font-size: 9px">(max size: 25MB)</a></label>
     <input type="file" accept="image/png, image/jpeg" name="im6" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
-    <label for="company">Image 7* <a style="font-size: 9px">(max size: 25MB)</a></label>
+    <label for="im7">Image 7* <a style="font-size: 9px">(max size: 25MB)</a></label>
     <input type="file" accept="image/png, image/jpeg" name="im7" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
-    <label for="company">Image 8* <a style="font-size: 9px">(max size: 25MB)</a></label>
+    <label for="im8">Image 8* <a style="font-size: 9px">(max size: 25MB)</a></label>
     <input type="file" accept="image/png, image/jpeg" name="im8" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
     
     
@@ -331,10 +331,10 @@ body, h1, h2, h3, h4, h5 {
         <option value="9">Strongly Disagree</option>
       </select-->
         
-        <input  type="checkbox" class="form-control"> Randomize order 
+        <input  type="checkbox" class="form-control" name="randomize"> Randomize order 
     <hr style="padding-bottom: 24px">
         <div class="w3-center">
-        <input  type="checkbox"  name="_optin"  style="bottom: 0px" required> 
+        <input  type="checkbox"  name="consent"  style="bottom: 0px" required> 
         I accept the <u onclick="document.getElementById('terms&conditions').style.display='block';">Terms &amp; Conditions</u>.
   <input type="submit"  value="Send Request">
           </div>
@@ -380,7 +380,13 @@ body, h1, h2, h3, h4, h5 {
   </div>
 
 </div>
-  
+  <script>
+    window.onbeforeunload = () => {
+  for(const form of document.getElementsByTagName('form')) {
+    form.reset();
+  }
+}
+  </scrirpt>
     
   </body>
 </html>
