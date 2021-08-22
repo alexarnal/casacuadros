@@ -336,7 +336,7 @@ body, h1, h2, h3, h4, h5 {
         <div class="w3-center">
         <input  type="checkbox"  name="consent"  style="bottom: 0px" required> 
         I accept the <u onclick="document.getElementById('terms&conditions').style.display='block';">Terms &amp; Conditions</u>.
-  <input type="submit"  value="Send Request">
+  <input type="submit"  value="Send Request" onclick="document.getElementById('uploading').style.display='block';">
           </div>
 </form>
       
@@ -346,6 +346,18 @@ body, h1, h2, h3, h4, h5 {
       Email your contact information and your eight images to <a style="text-decoration-color: black" href="mailto:alex51195@gmail.com?subject=Space Request">alex51195@gmail.com</a>.
     </p-->
     
+    <div id="uploading" class="modal">
+      <div class="modal-content">
+        <span class="w3-button" onclick="document.getElementById('terms&conditions').style.display='none';">&times;</span>
+        <h2 style="text-align:center"> Terms &amp; Conditions</h2>
+        <hr style="margin:16px">
+        <ul style="text-align: justify">
+          
+        </ul>
+        
+      </div>
+    
+    </div>
     
     
     <div id="terms&conditions" class="modal">
@@ -358,11 +370,11 @@ body, h1, h2, h3, h4, h5 {
           <li>You agree all contact information is accurate and yours.</li>
           <li>You agree all images you provide are yours.</li>
           <li>You agree you have permission from the subjects in the images you provide to use the images 
-            for advertising purposes on third-party platforms.</li>
+            for advertising purposes on third-party platforms, such as casacuadros.com.</li>
           <li>You give Casa de Cuadros permission to crop images to square dimensions if images are not already square.</li>
-          <li>You give Casa de Cuadros permission to automatically renew your monthly membership, 
-            and thus keep your contact information and images you provide on the wall of profiles.</li>
-          <li>You agree you can contact <a style="text-decoration-color: black" href="mailto:alex51195@gmail.com?subject=Space Request">alex51195@gmail.com</a> to cancel your monthly membership at any time.</li>
+          <!--li>You give Casa de Cuadros permission to automatically renew your monthly membership, 
+            and thus keep your contact information and images you provide on the wall of profiles.</li-->
+          <li>You can contact <a style="text-decoration-color: black" href="mailto:alex51195@gmail.com?subject=Space Request">alex51195@gmail.com</a> at any time to remove your information from the wall of photographers. </li>
         </ul>
         
       </div>
@@ -387,6 +399,15 @@ body, h1, h2, h3, h4, h5 {
   }
 }
   </script>
-    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-205563571-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-205563571-1');
+</script>
   </body>
 </html>
