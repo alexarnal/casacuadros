@@ -7,6 +7,8 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css">
 <link href="../css/openSans.css" rel="stylesheet" type="text/css">
 <link href="../images/casacuadros/logo.png" rel="shortcut icon" type="image/png" >
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../js/scripts.js"></script>
 <style>
 body, h1, h2, h3, h4, h5 {
   font-family: "Open Sans", monospace;
@@ -146,7 +148,44 @@ body, h1, h2, h3, h4, h5 {
     text-transform: none;
   }
   
-  
+  #lock-modal {
+    display: none;
+    background-color: black;
+    opacity: 0.6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin:auto;
+    z-index: 1000;
+  }
+
+  #loading-circle {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    border: 4px solid darkgray;
+    border-top: 4px solid darkgray;
+    border-radius: 0%;
+    animation: spin 3s ease-in infinite;
+    z-index: 1000;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 </style>
 <body>
 <a href="../index.html">
@@ -277,87 +316,63 @@ body, h1, h2, h3, h4, h5 {
     
     
     <div style="max-width: 340px; margin-left: auto; margin-right: auto;">
-      <form id="fs-frm" name="survey-form" accept-charset="utf-8" action="https://formspree.io/f/mdoypajn" method="POST" enctype="multipart/form-data">
+      <form id="fs-frm" name="survey-form" accept-charset="utf-8" action="https://formspree.io/f/mdoypajn" onsubmit="return flase" method="POST" enctype="multipart/form-data">
         
-  <fieldset id="fs-frm-inputs">
-    <h4>Your Contact Information</h4>
-    <label for="fullName">Full Name*</label>
-    <input type="text" name="name" class="form-control" style="width:100%" placeholder="First & Last or Company Name" required>
-    <label for="email">Email Address*</label>
-    <input type="text" name="email" class="form-control" style="width:100%" placeholder="email@domain.tld" required>
-    <label for="address">Address</label>
-    <input type="text" name="address" class="form-control" style="width:100%" placeholder="123 Main, El Paso TX 79999">
-    <label for="phone">Phone Number</label>
-    <input type="text" name="phone" class="form-control" style="width:100%" placeholder="(915)  • • •  -  • • • •">
-    <label for="website">Website</label>
-    <input type="text" name="website" class="form-control" style="width:100%" placeholder="domain.tld">
-    <label for="instagram">Instagram</label>
-    <input type="text" name="instagram" class="form-control" style="width:100%" placeholder="instagram.com/yourusername">
-    <label for="facebook">Facebook</label>
-    <input type="text" name="facebook" class="form-control" style="width:100%" placeholder="facebook.com/yourusername">
-    <label for="twitter">Twitter</label>
-    <input type="text" name="twiiter" class="form-control" style="width:100%" placeholder="twitter.com/yourusername">
-    <label for="logo">Logo <a style="font-size: 9px">(max size: 25MB)</a></label>
-    <input type="file" accept="image/png, image/jpeg" name="logo" class="form-control" style="color: rgba(130,130,130,1.00);width:100%"> 
-    <input  type="checkbox" class="form-control"> Display logo instead of name
-    <br><br><br>
-    <h4>Your Work</h4>
-    <label for="im1">Image 1* <a style="font-size: 9px">(max size: 25MB)</a></label>
-    <input type="file" accept="image/png, image/jpeg" name="im1" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
-    <label for="im2">Image 2* <a style="font-size: 9px">(max size: 25MB)</a></label>
-    <input type="file" accept="image/png, image/jpeg" name="im2" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
-    <label for="im3">Image 3* <a style="font-size: 9px">(max size: 25MB)</a></label>
-    <input type="file" accept="image/png, image/jpeg" name="im3" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
-    <label for="im4">Image 4* <a style="font-size: 9px">(max size: 25MB)</a></label>
-    <input type="file" accept="image/png, image/jpeg" name="im4" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
-    <label for="im5">Image 5* <a style="font-size: 9px">(max size: 25MB)</a></label>
-    <input type="file" accept="image/png, image/jpeg" name="im5" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
-    <label for="im6">Image 6* <a style="font-size: 9px">(max size: 25MB)</a></label>
-    <input type="file" accept="image/png, image/jpeg" name="im6" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
-    <label for="im7">Image 7* <a style="font-size: 9px">(max size: 25MB)</a></label>
-    <input type="file" accept="image/png, image/jpeg" name="im7" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
-    <label for="im8">Image 8* <a style="font-size: 9px">(max size: 25MB)</a></label>
-    <input type="file" accept="image/png, image/jpeg" name="im8" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
-    
-    
-  </fieldset>
-        <!--label for="timely">Order</label>
-        <select name="quality" id="quality" required="">
-        <option value="Choose" selected="" disabled="">Choose</option>
-        <option value="1">As Uploaded</option>
-        <option value="3">Randomize</option>
-        <option value="5">Neutral</option>
-        <option value="7">Disagree</option>
-        <option value="9">Strongly Disagree</option>
-      </select-->
-        
-        <input  type="checkbox" class="form-control" name="randomize"> Randomize order 
-    <hr style="padding-bottom: 24px">
-        <div class="w3-center">
-        <input  type="checkbox"  name="consent"  style="bottom: 0px" required> 
-        I accept the <u onclick="document.getElementById('terms&conditions').style.display='block';">Terms &amp; Conditions</u>.
-  <input type="submit"  value="Send Request" onclick="document.getElementById('uploading').style.display='block';">
+        <fieldset id="fs-frm-inputs">
+          <h4>Your Contact Information</h4>
+          <label for="fullName">Full Name*</label>
+          <input type="text" name="name" class="form-control" style="width:100%" placeholder="First & Last or Company Name" required>
+          <label for="email">Email Address*</label>
+          <input type="text" name="email" class="form-control" style="width:100%" placeholder="email@domain.tld" required>
+          <label for="address">Address</label>
+          <input type="text" name="address" class="form-control" style="width:100%" placeholder="123 Main, El Paso TX 79999">
+          <label for="phone">Phone Number</label>
+          <input type="text" name="phone" class="form-control" style="width:100%" placeholder="(915)  • • •  -  • • • •">
+          <label for="website">Website</label>
+          <input type="text" name="website" class="form-control" style="width:100%" placeholder="domain.tld">
+          <label for="instagram">Instagram</label>
+          <input type="text" name="instagram" class="form-control" style="width:100%" placeholder="instagram.com/yourusername">
+          <label for="facebook">Facebook</label>
+          <input type="text" name="facebook" class="form-control" style="width:100%" placeholder="facebook.com/yourusername">
+          <label for="twitter">Twitter</label>
+          <input type="text" name="twiiter" class="form-control" style="width:100%" placeholder="twitter.com/yourusername">
+          <label for="logo">Logo <a style="font-size: 9px">(max size: 25MB)</a></label>
+          <input type="file" accept="image/png, image/jpeg" name="logo" class="form-control" style="color: rgba(130,130,130,1.00);width:100%"> 
+          <input  type="checkbox" class="form-control"> Display logo instead of name
+          <br><br><br>
+          <h4>Your Work</h4>
+          <label for="im1">Image 1* <a style="font-size: 9px">(max size: 25MB)</a></label>
+          <input type="file" accept="image/png, image/jpeg" name="im1" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
+          <label for="im2">Image 2* <a style="font-size: 9px">(max size: 25MB)</a></label>
+          <input type="file" accept="image/png, image/jpeg" name="im2" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
+          <label for="im3">Image 3* <a style="font-size: 9px">(max size: 25MB)</a></label>
+          <input type="file" accept="image/png, image/jpeg" name="im3" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
+          <label for="im4">Image 4* <a style="font-size: 9px">(max size: 25MB)</a></label>
+          <input type="file" accept="image/png, image/jpeg" name="im4" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
+          <label for="im5">Image 5* <a style="font-size: 9px">(max size: 25MB)</a></label>
+          <input type="file" accept="image/png, image/jpeg" name="im5" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
+          <label for="im6">Image 6* <a style="font-size: 9px">(max size: 25MB)</a></label>
+          <input type="file" accept="image/png, image/jpeg" name="im6" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
+          <label for="im7">Image 7* <a style="font-size: 9px">(max size: 25MB)</a></label>
+          <input type="file" accept="image/png, image/jpeg" name="im7" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
+          <label for="im8">Image 8* <a style="font-size: 9px">(max size: 25MB)</a></label>
+          <input type="file" accept="image/png, image/jpeg" name="im8" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
+
+          <input  type="checkbox" class="form-control" name="randomize"> Randomize order 
+          <hr style="padding-bottom: 24px">
+          <div class="w3-center">
+            <input  type="checkbox"  name="consent"  style="bottom: 0px" required> I accept the 
+              <u onclick="document.getElementById('terms&conditions').style.display='block';">Terms &amp; Conditions</u>.
+            <input type="submit"  value="Send Request" >
           </div>
-</form>
+        </fieldset>
+      </form>
       
     
     </div>
     <!--p>  
       Email your contact information and your eight images to <a style="text-decoration-color: black" href="mailto:alex51195@gmail.com?subject=Space Request">alex51195@gmail.com</a>.
     </p-->
-    
-    <div id="uploading" class="modal">
-      <div class="modal-content">
-        <span class="w3-button" onclick="document.getElementById('terms&conditions').style.display='none';">&times;</span>
-        <h2 style="text-align:center"> Terms &amp; Conditions</h2>
-        <hr style="margin:16px">
-        <ul style="text-align: justify">
-          
-        </ul>
-        
-      </div>
-    
-    </div>
     
     
     <div id="terms&conditions" class="modal">
@@ -374,17 +389,19 @@ body, h1, h2, h3, h4, h5 {
           <li>You give Casa de Cuadros permission to crop images to square dimensions if images are not already square.</li>
           <!--li>You give Casa de Cuadros permission to automatically renew your monthly membership, 
             and thus keep your contact information and images you provide on the wall of profiles.</li-->
-          <li>You can contact <a style="text-decoration-color: black" href="mailto:alex51195@gmail.com?subject=Space Request">alex51195@gmail.com</a> at any time to remove your information from the wall of photographers. </li>
+          <li>You can contact <a style="text-decoration-color: black" href="mailto:casacdrs@gmail.com?subject=Space Request">casacdrs@gmail.com</a> at any time to remove your information from the wall of photographers. </li>
         </ul>
         
       </div>
     
     </div>
+    
   </div>
 </div>
 
 <hr style="margin:16px;border-top: 1px solid #ccc">
- 
+<div id="lock-modal"></div>
+<div id="loading-circle"></div>
 <div class="w3-bottom{position:relative}  w3-container" style="padding-bottom:16px;font-size: 10px">
   <div class="w3-left">
     <a style="color:darkgray;">© 2021 Casa de Cuadros. All rights reserved.</a>
@@ -409,5 +426,7 @@ body, h1, h2, h3, h4, h5 {
 
   gtag('config', 'UA-205563571-1');
 </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="scripts.js"></script>
   </body>
 </html>
