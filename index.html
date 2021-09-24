@@ -156,13 +156,22 @@ body, h1, h2, h3, h4, h5 {
           let div = document.createElement("div");
           div.classList.add("w3-container");
           //Header
+          //Short header
           let shortHeader = document.createElement("header");
           shortHeader.classList = "w3-container w3-top w3-white w3-padding-16 ";
           shortHeader.id = "shortHeader"+item.id
-          let a1 = document.createElement("a");
-          a1.classList = "w3-left w3-padding w3-xlarge";
-          a1.textContent=item.name;
-          shortHeader.appendChild(a1);
+          if ((item.logoOn == false) || (item.logoOn == null)) {
+            let a1 = document.createElement("a");
+            a1.classList = "w3-left w3-padding w3-xlarge";
+            a1.textContent=item.name;
+            shortHeader.appendChild(a1);
+          }
+          if (item.logoOn == true){
+            let logoIm1 = document.createElement("img");
+            logoIm1.style = "height:48px";
+            logoIm1.src = "../"+item.username+"/"+item.files.logo;
+            shortHeader.appendChild(logoIm1);
+          }
           //Modal Trigger
           let a2 = document.createElement("a");
           a2.classList = "w3-right w3-button w3-white w3-xlarge";
@@ -172,14 +181,24 @@ body, h1, h2, h3, h4, h5 {
           shortHeader.appendChild(a2);
           div.appendChild(shortHeader);
           
+          //Long header
           let longHeader = document.createElement("header");
           longHeader.classList = "w3-container w3-top w3-white w3-padding-16 ";
           longHeader.id = "longHeader"+item.id
           longHeader.style.display="none"
-          let a3 = document.createElement("a");
-          a3.classList = "w3-left w3-padding w3-xlarge";
-          a3.textContent=item.name;
-          longHeader.appendChild(a3);
+
+          if ((item.logoOn == false) || (item.logoOn == null)) {
+            let a3 = document.createElement("a");
+            a3.classList = "w3-left w3-padding w3-xlarge";
+            a3.textContent=item.name;
+            longHeader.appendChild(a3);
+          }
+          if (item.logoOn == true){
+            let logoIm2 = document.createElement("img");
+            logoIm2.style = "height:64px";
+            logoIm2.src = "../"+item.username+"/"+item.files.logo;
+            longHeader.appendChild(logoIm2);
+          }
           //Modal Trigger
           let a4 = document.createElement("a");
           a4.classList = "w3-right w3-button w3-white w3-xlarge";
