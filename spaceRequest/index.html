@@ -185,8 +185,14 @@ body, h1, h2, h3, h4, h5 {
     border: 4px solid darkgray;
     border-top: 4px solid darkgray;
     border-radius: 0%;
+    -webkit-animation: spin 3s ease-in infinite;
     animation: spin 3s ease-in infinite;
     z-index: 1000;
+  }
+
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
   }
 
   @keyframes spin {
@@ -324,32 +330,51 @@ body, h1, h2, h3, h4, h5 {
     
     <div class="w3-container" style="border:1px solid rgba(88,88,88,1.00);">
       <div style="max-width: 100%; margin-left: auto; margin-right: auto;">
-        <form id="fs-frm" name="survey-form" accept-charset="utf-8" action="https://formspree.io/f/xgerpgbv" onsubmit="return flase" method="POST" enctype="multipart/form-data">
+        <form id="fs-frm" name="survey-form" accept-charset="utf-8" action="https://formspree.io/f/mqkwjpdg" onsubmit="return flase" method="POST" enctype="multipart/form-data">
           
           <fieldset id="fs-frm-inputs">
             <h4>Your Contact Information</h4>
+            
             <label for="fullName">Full Name*</label>
             <input type="text" name="name" class="form-control" style="width:100%" placeholder="First & Last or Company Name" required>
+
             <label for="email">Email Address*</label>
             <input type="text" name="email" class="form-control" style="width:100%" placeholder="email@domain.tld" required>
-            <input type="checkbox" class="form-control"> <a style="font-size: 9px">Do not display email</a>
+            
+            <label for="dontDisplayEmail"> 
+              <input type="checkbox" name="dontDisplayEmail" class="form-control"> 
+              Do not display email
+            </label>
+            
             <label for="address">Address</label>
             <input type="text" name="address" class="form-control" style="width:100%" placeholder="123 Main, El Paso TX 79999">
+            
             <label for="phone">Phone Number</label>
             <input type="text" name="phone" class="form-control" style="width:100%" placeholder="(915)  • • •  -  • • • •">
+            
             <label for="website">Website</label>
             <input type="text" name="website" class="form-control" style="width:100%" placeholder="domain.tld">
+            
             <label for="instagram">Instagram</label>
             <input type="text" name="instagram" class="form-control" style="width:100%" placeholder="instagram.com/yourusername">
+            
             <label for="facebook">Facebook</label>
             <input type="text" name="facebook" class="form-control" style="width:100%" placeholder="facebook.com/yourusername">
+            
             <label for="twitter">Twitter</label>
             <input type="text" name="twitter" class="form-control" style="width:100%" placeholder="twitter.com/yourusername">
+            
             <label for="otherContact">Other Contact</label>
             <input type="text" name="otherContact" class="form-control" style="width:100%" placeholder="linktr.ee, YouTube, etc.">
-            <label for="logo">Logo <a style="font-size: 9px">(max size: 25MB)</a></label>
+            
+            <label for="logo">Logo<a style="font-size: 9px">(max size: 25MB)</a></label>
             <input type="file" accept="image/png, image/jpeg" name="logo" class="form-control" style="color: rgba(130,130,130,1.00);width:100%"> 
-            <input type="checkbox" class="form-control"> <a style="font-size: 9px">Display logo instead of name</a>
+            
+            <label for="displayLogo"> 
+              <input type="checkbox" name="displayLogo" class="form-control"> 
+              Display logo instead of name
+            </label>
+            
             <br><br><br>
             <h4>Your Work</h4>
             <label for="im1">Image 1* <a style="font-size: 9px">(max size: 25MB)</a></label>
@@ -369,14 +394,23 @@ body, h1, h2, h3, h4, h5 {
             <label for="im8">Image 8* <a style="font-size: 9px">(max size: 25MB)</a></label>
             <input type="file" accept="image/png, image/jpeg" name="im8" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
 
-            <input  type="checkbox" class="form-control" name="randomize"> Randomize order 
+            <label for="randomize"> 
+              <input type="checkbox" name="randomize" class="form-control"> 
+              Randomize order
+            </label>
+
             <hr style="padding-bottom: 24px">
             <div class="w3-center">
-              <input  type="checkbox"  name="consent"  style="bottom: 0px" required> I accept the 
-                <u onclick="document.getElementById('terms&conditions').style.display='block';">Terms &amp; Conditions</u>.<br>
-              <input type="submit"  value="Send Request" >
+              <label for="consent">
+                <input  type="checkbox"  name="consent"  required> I accept the 
+                  <u onclick="document.getElementById('terms&conditions').style.display='block';">Terms &amp; Conditions</u>.<br>
+                
+              </label>
+              <input type="submit" value="Submit" onclick= "document.getElementById('lock-modal').style.display = 'block'; document.getElementById('loading-circle').style.display = 'block';">
             </div>
           </fieldset>
+          <div id="lock-modal"></div>
+          <div id="loading-circle"></div>
         </form>
         
       
@@ -414,13 +448,13 @@ body, h1, h2, h3, h4, h5 {
     <div style="max-width: 98%; margin-left: auto; margin-right: auto;"> 
       <form id="fs-frm_1" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xvodlkzp" method="post">
         <h4>Get in touch!</h4>
-        <fieldset id="fs-frm-inputs">
+        <fieldset id="fs-frm-inputs_1">
           <label for="full-name">Full Name</label>
           <input type="text" name="name" id="full-name" style="width:100%" placeholder="First and Last" required="">
           <label for="email-address">Email Address</label>
           <input type="email" name="_replyto" id="email-address" style="width:100%" placeholder="email@domain.tld" required="">
           <label for="message">Message</label>
-          <textarea rows="5" name="message" id="message" style="width:100%" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea>
+          <textarea rows="5" name="message" id="message" style="width:100%" placeholder="Happy to help" required=""></textarea>
           
           <input type="hidden" name="_subject" id="email-subject" style="width:100%" value="Contact Form Submission">
         </fieldset>
@@ -433,8 +467,8 @@ body, h1, h2, h3, h4, h5 {
 </div>
 
 <hr style="margin:16px;border-top: 1px solid #ccc">
-<div id="lock-modal"></div>
-<div id="loading-circle"></div>
+
+
 <div class="w3-bottom{position:relative}  w3-container" style="padding-bottom:16px;font-size: 10px">
   <div class="w3-left">
     <a style="color:darkgray;">© 2021 Casa de Cuadros. All rights reserved.</a>
