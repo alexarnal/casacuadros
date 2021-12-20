@@ -82,4 +82,31 @@
       "eight":"7s.jpg"
     }
   }
+  {
+    "id": 4,
+    "name": "Orlando J. Colon",
+    "username": "ojcolon",
+    "email": "mr.rager915@gmail.com",
+    "address": {
+      "street": "10982 Yogi Berra Dr",
+      "suite": "",
+      "city": "",
+      "zipcode": ""
+    },
+    "phone": "9152555293",
+    "website": "",
+    "instagram": "ragerphotographyep",
+    "facebook":"",
+    "twitter":"",
+    "files": {
+      "one":"im1.jpg",
+      "two":"im2.jpg",
+      "three":"im3.jpg",
+      "four":"im4.jpg",
+      "five":"im5.jpg",
+      "six":"im6.jpg",
+      "seven":"im7.jpg",
+      "eight":"im8.jpg"
+    }
+  }
 ]
