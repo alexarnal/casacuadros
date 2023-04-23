@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+    <title>Photographers</title>
+        <!--Meta-->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+        <!--Page Card for SEO-->
+        <meta property="og:title" content="Photographers at Casa de Cuadros" />
+        <meta property="og:description" content="Browse El Paso photographers at Casa de Cuadros - Explore a diverse collection of captivating images that capture the essence of El Paso and its vibrant culture." />
+        <meta property="og:url" content="https://casacuadros.com" />
+        <meta property="og:site_name" content="Photographers" />
+        <meta property="og:image" content="https://casacuadros.com/casacuadros/mani_wall.jpg" />
+    	<meta name="twitter:card" content="Browse local El Paso photographers at Casa de Cuadros - Explore a diverse collection of captivating images that capture the essence of El Paso and its vibrant culture. #ElPasoPhotography #PhotographyShowcase" />
+        <meta name="twitter:title" content="Photographers at Casa de Cuadros" />
+        <meta name="twitter:image" content="https://casacuadros.com/casacuadros/mani_wall.jpg" />
+
+        <!-- Favicon -->
+        <link rel="icon" href="casacuadros/logo_favicon.png"/>
+        <link rel="apple-touch-icon" href="casacuadros/logo_favicon.png" />
+        <meta name="msapplication-TileImage" content="casacuadros/logo_favicon.png" />
+
+        <!-- Bootstrap CSS -->
+        <link rel='stylesheet' href='css/bootstrap.css' type='text/css' media='screen' />
+
+        <!-- Owl Carousel Plugin CSS -->
+        <link rel='stylesheet' href='css/owl.carousel.css' type='text/css' media='screen' />
+
+        <!-- IconFont CSS -->
+        <link rel='stylesheet' href='css/font-awesome.min.css' type='text/css' media='screen' />
+
+        <!-- Lightbox Plugin CSS -->
+        <link rel='stylesheet' href='css/photoswipe.css' type='text/css' media='screen' />
+
+        <!-- Lightbox Plugin Skin CSS -->
+        <link rel='stylesheet' href='css/skin/photoswipe/default/default-skin.css' type='text/css' media='screen' />
+
+         <!-- BM builder CSS -->
+        <link rel='stylesheet' href='css/modules-style.css' type='text/css' media='screen' />
+
+        <!-- Single Portolio CSS -->
+        <link rel='stylesheet' href='css/post-portfolio.css' type='text/css' media='screen' />
+
+        <!-- Menu icon & Header icon CSS -->
+        <link rel='stylesheet' href='css/menuicon-default.css' type='text/css' media='screen' />
+        <link rel='stylesheet' href='css/headericon-default.css' type='text/css' media='screen' />
+
+        <!-- Art Theme Main CSS -->
+        <link rel='stylesheet' href='css/style.css' type='text/css' media='screen' />
+
+        <!--Custom style CSS -->
+        <link rel="stylesheet" href="css/custom.css" type="text/css" media='screen'>
+
+        <script>
+            var photoSwipeLocalize = [];photoSwipeLocalize.push({id:"facebook", label:"Share on Facebook", url:"https://www.facebook.com/sharer/sharer.php?u={{url}}"});photoSwipeLocalize.push({id:"twitter", label:"Tweet", url:"https://twitter.com/intent/tweet?text={{text}}&url={{url}}"});photoSwipeLocalize.push({id:"pinterest", label:"Pin it", url:"http://www.pinterest.com/pin/create/button/"+ "?url={{url}}&media={{image_url}}&description={{text}}"});photoSwipeLocalize.push({id:"download", label:"Download image", url:"{{raw_image_url}}", download:true});
+            var isFilterClick = false;
+            var UxCBModGlobal = [];
+            var UxCBModGlobalAjax = "false";
+            var ajaxurl = "";
+            var JS_PATH = "/js/"
+        </script>
+
+        <style id='module-style-inline-css' type='text/css'> 
+            
+ 
+        </style>
+        <style>
+            a.hover-link:hover {
+                color: lightgray;
+            }
+        </style>
+
+        <style>
+            .grid-item-con-text-tit-shown {
+            /* Add your style changes here */
+            text-align: right; /* Align text to the left */
+             /* Add a margin to shift the text slightly off-center to the right */
+            margin-right: 16px;
+            /* Add your style changes here */
+            margin-top: 25%;
+            /* Add any other styles you want to modify */
+            }
+            .grid-item-con{
+                --bgcolor-grid-hover: rgba(0,0,0,0.5);
+            }
+
+        </style>
+        <script>
+            document.getElementById("photographer-image").addEventListener("click", function() {
+                window.location.href = "photographer.html";
+            });
+        </script>
+        
+
+	</head>
+  
+    <body class="page page-id-266 pswp-light-skin responsive-ux navi-hide navi-hide-pop2 hide-menu-desktop show-menu-icon-mobile menu_hover_default page_from_top non_bg_header default-logo default-menu default-logo-menu-expand default-logo-menu-mobile header-sticky-none">
+
+        <div class="wrap-all">
+
+            <!--Audio Player-->
+            <div id="jquery_jplayer" class="jp-jplayer"></div>
+
+            <!--Main wrap-->
+            <div id="wrap-outer">
+
+                <!--Header-->
+                <header id="header" class=" " data-scroll="0" style="padding-top:16px">
+
+                    <div id="header-main" class="header-main container-fluid"> 
+
+                        <!--Logo-->
+                        <div class="navi-logo">        
+                            <div class="logo-wrap">
+                                <div id="logo" class="logo">
+                                    <a href="index.html" class="logo-a" title="Casa de Cuadros - El Paso's Premier Photography Showcase">
+                                        <img alt="Casa de Cuadros Logo" class="logo-image logo-image-default" src="casacuadros/logo_gray.svg">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Menu on header-->
+                        <div class="head-meta">
+
+                            <!--Navigation-->
+                            <!-- <nav id="navi-header" class="navi-header">
+                                <div id="navi_wrap" class="menu-main-container">
+                                    <ul class="menu clearfix">
+                                        <li class="menu-item"><a href="index.html">Works</a></li>
+                                        <li class="menu-item"><a href="blog.html">Blog</a></li> 
+                                        <li class="menu-item current-menu-item"><a href="information.html">Info</a></li>
+                                    </ul>
+                                </div>
+                            </nav> -->
+
+                            <!--Menu Icon-->
+                            <div class="navi-trigger-out navi-trigger-hamburg">
+
+                                <a href="javascript:;" id="navi-trigger" class="navi-trigger">
+                                    <svg class="navi-trigger-svg svg-style02" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 380">
+                                        <g class="svg-style02-line2 svg-style02-line"><rect class="svg-style02-line-rect" width="380" height="50" /></g>
+                                        <g class="svg-style02-line1 svg-style02-line"><rect class="svg-style02-line-rect" width="380" height="50" /></g>
+                                    </svg>
+                                </a>
+
+                            </div>
+                        
+                        </div><!--End head-meta-->
+
+                    </div><!--End head-main--> 
+                    
+                </header>
+
+                <!--Expanded Menu Panel-->
+                <div id="menu-panel" class="menu-panel menu-panel-align-left menu-panel-bottom-layout-b">
+
+                    <div class="menu-panel-inn container-fluid">
+                     
+                        <nav id="navi" class="navi">
+
+                            <div id="navi-wrap">
+
+                                <ul class="menu clearfix">
+                                    <li class="menu-item"><a href="photographers.html">Photographers</a></li> 
+                                    <li class="menu-item"><a href="featured.html">Featured</a></li>
+                                    <li class="menu-item"><a href="information.html">Info</a></li>
+                                </ul>
+
+                            </div><!--End #navi_wrap-->
+                        </nav>
+
+                        <!-- <div id="menu-panel-bottom" class="menu-panel-bottom container-fluid ">
+
+                            <div class="menu-panel-bottom-left col-md-3 col-sm-3 col-xs-5">
+
+                                <div class="search-top-btn-class">
+                                    <span class="fa fa-search"></span>
+                                    <form class="search_top_form"  method="get" action="#">
+                                        <input type="search" id="s" name="s" class="search_top_form_text" placeholder="Type and Hit Enter">
+                                    </form>
+                                </div>
+
+                            </div>
+
+                            <div class="menu-panel-bottom-right col-md-9 col-sm-9 col-xs-7">
+
+                                <section class="">
+            
+                                    <ul class="socialmeida clearfix">                       
+                                
+                                        <li class="socialmeida-li">
+                                            <a title="" href="https://twitter.com/Sea_Theme" class="socialmeida-a" rel="nofollow ">
+                                                <span class="fa fa-twitter"></span> </a>
+                                        </li>
+                                                
+                                        <li class="socialmeida-li">
+                                            <a title="" href="https://www.facebook.com/Uiueux/" class="socialmeida-a" rel="nofollow ">
+                                                <span class="fa fa-facebook"></span> </a>
+                                        </li>
+                                                
+                                        <li class="socialmeida-li">
+                                            <a title="" href="https://www.behance.net/bwsm" class="socialmeida-a" rel="nofollow ">
+                                                <span class="fa fa-behance"></span> </a>
+                                        </li>
+                                                
+                                       <li class="socialmeida-li">
+                                            <a title="" href="" class="socialmeida-a" rel="nofollow ">
+                                                <span class="fa fa-linkedin"></span> </a>
+                                        </li>
+                                                
+                                        <li class="socialmeida-li">
+                                            <a title="" href="" class="socialmeida-a" rel="nofollow ">
+                                                <span class="fa fa-youtube"></span> </a>
+                                        </li>
+                                                
+                                        <li class="socialmeida-li">
+                                            <a title="" href="" class="socialmeida-a" rel="nofollow ">
+                                                <span class="fa fa-flickr"></span> </a>
+                                        </li> 
+                                    </ul>
+            
+                                </section>
+
+                            </div>
+
+                        </div> -->
+
+                    </div>
+
+                </div><!--End #menu-panel-->
+
+    			
+                <!-- Main Content Wrap -->
+        		<div id="wrap"> 
+
+                    <!-- Main Content : portfolio, text content ... -->
+        	        <div id="content">
+
+                        <div class="content_wrap_outer fullwrap-layout">
+                
+                            <div id="content_wrap" class="">
+
+                                <div class="entry container-fluid container-class">
+
+                                    <!--BM Builder-->
+                                    <div class="bm-builder">                                        
+
+                                        <!--Group module-->
+                                        <div class="module col-0 module-id-1532496052733 bm-wrap row-middle row-center" data-module-col="0" data-change-color="off" data-backcolor="transparent" data-frontcolor="" data-logocolor="" data-goto-top="off" data-goto-top-spacing="0" data-groupsameheight="off">
+
+                                            <div class="module-inside" style="--height-group:100vh; --height-group-m:90vh; margin-bottom:20px;">
+
+                                                <!--Text module-->
+                                                <div id="" class="module col-12 module-id-1569485161691" data-module-col="12">
+
+                                                    <div class="module-inside">
+
+                                                        <div class="text_block_out " data-animationend="fadeined" data-effect="standard">
+                                                            <div class="text_block ux-mod-nobg">
+                                                                <div class="text_block_inn">
+                                                                    <div class="text_block_centered">
+                                                                        <h1 style="text-align: center;font-size: 100px; --font-size-m: 64px;">
+                                                                            Photographers
+                                                                        </h1>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div><!--End module-->
+
+                                            </div>
+                                        </div><!--End module bm-wrap(Group)-->
+
+                                        <!--Group module-->
+                                        <div class="module col-12 module-id-1532499858678 bm-wrap row-top row-left bm-wrap-height-auto" data-module-col="12" data-change-color="on" data-backcolor="#1c1c1c" data-frontcolor="#ffffff" data-logocolor="alt-logo-univer" data-goto-top="off" data-goto-top-spacing="0" data-groupsameheight="off">
+
+                                            <div class="module-inside " style="margin-bottom:120px; --margin-bottom-mod-m:60px;">
+
+
+                                                <!--Text module-->
+                                                <div id="" class="module col-6 module-id-1532501075746 col-offset-6" data-module-col="6">
+                                                    <div class="module-inside " style="--margin-bottom-mod-m:0px;">
+                                                        <div class="text_block_out " data-animationend="fadeined" data-effect="standard">
+                                                            <div class="text_block ux-mod-nobg">
+                                                                <div class="text_block_inn">
+                                                                    <div class="text_block_centered">
+                                                                        <p></p>
+                                                                        <p><span style="font-size: 22px;">Browse El Paso photographers at Casa de Cuadros - Explore a diverse collection of works that capture the essence of El Paso and its vibrant culture.</span></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!--End module-->
+
+                                            </div>
+                                        </div><!--End module bm-wrap(Group)-->
+
+
+                                        <!--Text module-->
+                                        <!-- <div class="module col-6 module-id-153249658398" data-module-col="6">
+                                            <div class="module-inside " style="--margin-bottom-m:20px;">
+                                                <div class="text_block_out " data-animationend="fadeined" data-effect="standard">
+                                                    <div class="text_block ux-mod-nobg">
+                                                        <div class="text_block_inn">
+                                                            <div class="text_block_centered " >
+                                                                <p></p>
+                                                                <h2 data-msize="22">People</h2>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> -->
+
+                                        <!--Portfolio module-->
+                                        <div id="" class="module col-12 module-id-1561011173846" data-module-col="12" data-change-color="on" data-backcolor="#1c1c1c" data-frontcolor="#ffffff" data-logocolor="default-logo-univer" data-goto-top="off" data-goto-top-spacing="0" data-groupsameheight="off">
+                                            <div class="module-inside " style="--spacing-grid:40px; --spacing-grid-m:10px; --padding-lr-grid-text:50px; --padding-lr-grid-text-m:10px; --padding-tb-grid-text:50px; --padding-tb-grid-text-m:10px; --fontsize-grid-title:35px; --fontsize-grid-title-m:12px; --textcolor-grid:#fff;--bgcolor-grid-hover: #000; ">
+                                                <div class="container-masonry ux-portfolio-2col ux-portfolio-2col-mobile ux-portfolio-full  ux-ratio-43 filter-left " data-ratio="0.75" data-col="2" data-found="8" data-number="12" data-mod="grid">
+                                                    <div id="gridItemsContainer" class="masonry-list grid-list clearfix grid-list-1561011173846  grid-text-top-left     "  data-unique="1561011173846" data-source="ux-portfolio">
+
+                                                        <!--Grid item-->
+                                                        <section class="grid-item sea-grid-item filter_branding" data-postid="694">
+                                                            <div class="grid-item-inside  bm-touch-tab " data-animationend="fadeined">
+                                                                <div class="grid-item-con  sea-grid-item-con post--694" >
+                                                                    
+                                                                    <a href="arnalstudio/index.html" title="Arnal Studio | Casa de Cuadros"  class="grid-item-mask-link"></a>
+
+                                                                    <div class="grid-item-con-text-tit-shown" >
+                                                                        <h2 class="grid-item-tit ">
+                                                                            <a href="arnalstudio/index.html" title="Arnal Studio | Casa de Cuadros" class="grid-item-tit-a" style="font-size:36px" rel=""> Arnal Studio
+                                                                            </a>
+                                                                        </h2> 
+                                                                    </div>
+                                                                </div>
+                                                                <div class="brick-content ux-lazyload-wrap  " style=" padding-top: 66.7%;">
+                                                                    <img class="grid-item-img ux-background-img-1st lazy" src="img/blank.gif" data-src="arnalstudio/3s.jpg" alt="No Title">
+                                                                </div>
+                                                                
+                                                                
+                                                            </div>
+                                                        </section>
+
+                                                        <!--Grid item-->
+                                                        <section class="grid-item sea-grid-item filter_branding" data-postid="694">
+                                                            <div class="grid-item-inside  bm-touch-tab " data-animationend="fadeined">
+                                                                <div class="grid-item-con  sea-grid-item-con post--694" >
+                                                                    
+                                                                    <a href="bkoveleskie/index.html" title="Bailie Koveleskie | Casa de Cuadros"  class="grid-item-mask-link"></a>
+
+                                                                    <div class="grid-item-con-text-tit-shown" >
+                                                                        <h2 class="grid-item-tit ">
+                                                                            <a href="bkoveleskie/index.html" title="Bailie Koveleskie | Casa de Cuadros" class="grid-item-tit-a" style="font-size:36px" rel=""> Bailie Koveleskie
+                                                                            </a>
+                                                                        </h2> 
+                                                                    </div>
+                                                                </div>
+                                                                <div class="brick-content ux-lazyload-wrap  " style=" padding-top: 66.7%;">
+                                                                    <img class="grid-item-img ux-background-img-1st lazy" src="img/blank.gif" data-src="bkoveleskie/4.jpg" alt="No Title">
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </section>
+
+                                                        <!--Grid item-->
+                                                        <section class="grid-item sea-grid-item filter_branding" data-postid="694">
+                                                            <div class="grid-item-inside  bm-touch-tab " data-animationend="fadeined">
+                                                                <div class="grid-item-con  sea-grid-item-con post--694" >
+                                                                    
+                                                                    <a href="ojcolon/index.html" title="No Title"  class="grid-item-mask-link"></a>
+
+                                                                    <div class="grid-item-con-text-tit-shown" >
+                                                                        <h2 class="grid-item-tit ">
+                                                                            <a href="ojcolon/index.html" title="No Title" class="grid-item-tit-a" style="font-size:36px" rel=""> Orlando J. Colon
+                                                                            </a>
+                                                                        </h2> 
+                                                                    </div>
+                                                                </div>
+                                                                <div class="brick-content ux-lazyload-wrap  " style=" padding-top: 66.7%;">
+                                                                    <img class="grid-item-img ux-background-img-1st lazy" src="img/blank.gif" data-src="ojcolon/2.jpg" alt="No Title">
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </section>
+
+                                                        <!--Grid item-->
+                                                        <section class="grid-item sea-grid-item filter_branding" data-postid="694">
+                                                            <div class="grid-item-inside  bm-touch-tab " data-animationend="fadeined">
+                                                                <div class="grid-item-con  sea-grid-item-con post--694" >
+                                                                    
+                                                                    <a href="tonyholguin/index.html" title="No Title"  class="grid-item-mask-link"></a>
+
+                                                                    <div class="grid-item-con-text-tit-shown" >
+                                                                        <h2 class="grid-item-tit ">
+                                                                            <a href="tonyholguin/index.html" title="No Title" class="grid-item-tit-a" style="font-size:36px" rel=""> Tony Holguin
+                                                                            </a>
+                                                                        </h2> 
+                                                                    </div>
+                                                                </div>
+                                                                <div class="brick-content ux-lazyload-wrap  " style=" padding-top: 66.7%;">
+                                                                    <img class="grid-item-img ux-background-img-1st lazy" src="img/blank.gif" data-src="tonyholguin/1.jpg" alt="No Title">
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </section>
+
+                                                    </div><!--End masonry-list -->
+                                                </div><!--End container-masonry-->
+                                            </div><!--End module-inside-->
+                                        </div><!--End module-->
+
+                                        
+                                        <!--Group module-->
+                                        <div id="" class="module col-12 module-id-1578321625824 bm-wrap row-middle row-center" data-module-col="12" data-change-color="off" data-goto-top="off" data-goto-top-spacing="0" data-groupsameheight="off">
+                                            <div class="module-inside " style="margin-bottom: 80px; --margin-bottom-mod-m: 40px; margin-top: 80px; --margin-top-mod-m: 40px;">
+
+                                                <!--Post navigation-->
+                                                <div id="" class="module col-12 module-id-1578024278850" data-module-col="12">
+                                                    <div class="module-inside " style=" --margin-bottom-mod-m: 40px;">
+                                                        <div class="post-navi post-navi-bg ux-left " data-animationend="fadeined">
+                                                            <div class="post-navi-tit-wrap" style="padding-top: 50px; padding-bottom: 50px; --paddingtop-post-navi-tit-wrap-m: 0px; --paddingbottom-post-navi-tit-wrap-m: 0px;">
+                                                            
+                                                                <h2 class="post-navi-tit">
+                                                                    <a class="post-navi-tit-a" href="index.html" title="Home">Casa de Cuadros</a>
+                                                                </h2><br>
+                                                                <h3 class="post-navi-tit">
+                                                                    <a class="post-navi-tit-a" href="featured.html" title="Featured">Featured</a>
+                                                                </h3>
+                                                                <h3 class="post-navi-tit">
+                                                                    <a class="post-navi-tit-a" href="information.html" title="Information">Info</a>
+                                                                </h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!--End module-->
+
+                                            </div><!--End module-inside-->
+                                        </div><!--End module .bm-wrap -->
+
+                                    </div>
+
+                                    <div class="clear"></div>
+
+                                </div><!--End entry-->
+
+                            </div><!-- End #content_wrap-->
+
+                        </div><!-- End content_wrap_outer-->
+
+                    </div><!--End #content-->
+
+                    <!-- Footer -->
+                    <footer id="footer" class="footer-cols-layout footer-cols-layout-mobile">
+
+                        <div class="footer-info footer-horizon-left footer-horizon-left-mobile">
+                            
+                            <div class="container-fluid">
+
+                                <div class="footer-cols-item footer-cols-item-mobile">
+                                    <div class="copyright">&copy; 2023 <a class="hover-link" href="https://casacuadros.com" title="Designed by SeaTheme"> Casa de Cuadros </a> </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+
+                </div><!--End #wrap -->
+    	  
+            </div><!--End wrap-outer-->
+
+            <!-- Lightbox -->
+            <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+                <div class="pswp__bg"></div>
+
+                <div class="pswp__scroll-wrap">
+
+                    <div class="pswp__container">
+                        <div class="pswp__item"></div>
+                        <div class="pswp__item"></div>
+                        <div class="pswp__item"></div>
+                    </div>
+
+                    <div class="pswp__ui pswp__ui--hidden">
+
+                        <div class="pswp__top-bar">
+
+                            <div class="pswp__counter"></div>
+                            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                            <button class="pswp__button pswp__button--share" title="Share"></button>
+                            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                            <div class="pswp__preloader">
+                                <div class="pswp__preloader__icn">
+                                  <div class="pswp__preloader__cut">
+                                    <div class="pswp__preloader__donut"></div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                            <div class="pswp__share-tooltip"></div> 
+                        </div>
+
+                        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                        </button>
+                        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                        </button>
+
+                        <div class="pswp__caption">
+                            <div class="pswp__caption__center"></div>
+                        </div>
+
+                    </div>
+
+                </div><!--End pswp__scroll-wrap-->
+
+            </div><!--End pswp-->
+
+            <!--Back to Top-->
+            <div class="back-top-wrap center-ux container-fluid hidden-xs">
+                <div id="back-top" class="backtop-shown"></div>
+            </div>
+            
+        </div><!--End wrap-all-->
+        
+        <div id="get-scroll-width"></div>
+
+        <!-- jQuery Library -->
+        <script src='js/library/jquery.min.js'></script>
+        <!-- Underscore -->
+        <script src='js/underscore.min.js'></script>
+        <!-- Modernizr -->
+        <script src='js/modernizr-custom.js'></script>
+        <!-- Waypoints Plugin -->
+        <script src='js/jquery.waypoints.min.js'></script>
+        <!-- ImageLoaded Plugin-->
+        <script src='js/imagesloaded.pkgd.min.js'></script>
+        <!-- isotope Plugin -->
+        <script src='js/isotope.pkgd.min.js'></script>
+        <!-- Packery layout mode -->
+        <script src='js/packery-mode.pkgd.min.js'></script>
+        <!-- Photoswipe Plugin -->
+        <script src='js/photoswipe.min.js'></script>
+        <!-- Photoswipe Plugin UI -->
+        <script src='js/photoswipe-ui-default.min.js'></script>
+        <!-- OWL Carousel Plugin -->
+        <script src='js/owl.carousel.min.js'></script>
+        <!-- Lazy Load Plugin-->
+        <script src='js/lazyload.min.js'></script>
+        <!-- jplayer Plugin -->
+        <script src='js/jquery.jplayer.min.js'></script>
+        <!-- Modules Global js-->
+        <script src='js/modules-global.js'></script>
+        <!-- Text Module js-->
+        <script src='js/mod/text.js'></script>
+        <!-- Single Image Module js-->
+        <script src='js/mod/single-image.js'></script>
+        <!-- Slide Module js-->
+        <script src='js/mod/slider.js'></script>
+        <!-- Grid Module js-->
+        <script src='js/mod/grid.js'></script>
+        <!-- Masonry Grid Module js-->
+        <script src='js/mod/masonry-grid.js'></script>
+        <!-- Embed Module js-->
+        <script src='js/mod/embed.js'></script>
+        <!-- Contact Form Module js-->
+        <script src='js/mod/contact-form.js'></script>
+        <!-- Single Portfolio js -->
+        <script src='js/portfolio-2col.js'></script>
+        <!-- Theme main js -->
+        <script src='js/custom.theme.js'></script>
+
+        <script>
+            // Get the wrapper div element
+            var wrapper = document.getElementById('single-image-wrapper');
+            // Get all the Single Image Model div elements as a NodeList
+            var singleImageModels = wrapper.querySelectorAll('.module.col-6.module-id-1532325231180');
+            // Convert the NodeList to an array
+            var singleImageArray = Array.from(singleImageModels);
+        
+            // Function to shuffle the array randomly
+            function shuffleArray(array) {
+                for (var i = array.length - 1; i > 0; i--) {
+                    var j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
+            }
+        
+            // Shuffle the array of Single Image Model div elements
+            var shuffledArray = shuffleArray(singleImageArray);
+        
+            // Append the shuffled Single Image Model div elements back to the wrapper div element in the new order
+            shuffledArray.forEach(function (element) {
+                wrapper.appendChild(element);
+            });
+        </script>
+
+
+        <script>
+            // Get the wrapper div element
+            var wrapper = document.getElementById('gridItemsContainer');
+            // Get all the Single Image Model div elements as a NodeList
+            var singleImageModels = wrapper.querySelectorAll('.grid-item.sea-grid-item.filter_branding');
+            // Convert the NodeList to an array
+            var singleImageArray = Array.from(singleImageModels);
+
+            // Function to shuffle the array randomly
+            function shuffleArray(array) {
+                for (var i = array.length - 1; i > 0; i--) {
+                    var j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
+            }
+
+            // Shuffle the array of Single Image Model div elements
+            var shuffledArray = shuffleArray(singleImageArray);
+
+            // Append the shuffled Single Image Model div elements back to the wrapper div element in the new order
+            shuffledArray.forEach(function (element) {
+                wrapper.appendChild(element);
+            });
+        </script>
+
+    </body>
+</html>

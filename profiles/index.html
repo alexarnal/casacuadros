@@ -327,15 +327,34 @@
           div2.classList.add("column");
           let img1 = document.createElement("img");
           img1.loading = "lazy";
+          // Make sure img is sized correctly so there is no shifting of elements when the image loads
           img1.style = "width:100%";
-          img1.src = "../"+item.username+"/"+item.files.one;
+          img1.style = "height:100%";
+          img1.style = "object-fit:cover";
+          img1.style = "object-position:center";
+          //img1.style = "border-radius: 5px";
+          //img1.style = "box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)";
+          img1.src = "../casacuadros/1.png"; // Set the placeholder image URL as the initial src
+          img1.dataset.src = "../" + item.username + "/" + item.files.one; // Store the actual image URL in data-src
+          img1.addEventListener("load", function() {
+            // Once the actual image is loaded, update the src attribute
+            img1.src = img1.dataset.src;
+          });
           div2.appendChild(img1);
           let div3 = document.createElement("div");
           div3.classList = "w3-hide-medium w3-hide-small";
           let img2 = document.createElement("img");
           img2.loading = "lazy";
           img2.style = "width:100%";
-          img2.src = "../"+item.username+"/"+item.files.five;
+          img2.style = "height:100%";
+          img2.style = "object-fit:cover";
+          img2.style = "object-position:center";
+          img2.src = "../casaCuadros/1.png"; // Set the placeholder image URL as the initial src
+          img2.dataset.src = "../"+item.username+"/"+item.files.five; // Store the actual image URL in data-src
+          img2.addEventListener("load", function() {
+            // Once the actual image is loaded, update the src attribute
+            img2.src = img2.dataset.src;
+          });
           div3.appendChild(img2);
           div2.appendChild(div3);
           div1.appendChild(div2);
@@ -345,14 +364,24 @@
           let img3 = document.createElement("img");
           img3.loading = "lazy";
           img3.style = "width:100%";
-          img3.src = "../"+item.username+"/"+item.files.two;
+          img3.src = "../casaCuadros/1.png"; // Set the placeholder image URL as the initial src
+          img3.dataset.src = "../"+item.username+"/"+item.files.two;
+          img3.addEventListener("load", function() {
+            // Once the actual image is loaded, update the src attribute
+            img3.src = img3.dataset.src;
+          });
           div4.appendChild(img3);
           let div5 = document.createElement("div");
           div5.classList = "w3-hide-medium w3-hide-small";
           let img4 = document.createElement("img");
           img4.loading = "lazy";
           img4.style = "width:100%";
-          img4.src = "../"+item.username+"/"+item.files.six;
+          img4.src = "../casaCuadros/1.png"; // Set the placeholder image URL as the initial src
+          img4.dataset.src = "../"+item.username+"/"+item.files.six;
+          img4.addEventListener("load", function() {
+            // Once the actual image is loaded, update the src attribute
+            img4.src = img4.dataset.src;
+          });
           div5.appendChild(img4);
           div4.appendChild(div5);
           div1.appendChild(div4);
@@ -362,14 +391,24 @@
           let img5 = document.createElement("img");
           img5.loading = "lazy";
           img5.style = "width:100%";
-          img5.src = "../"+item.username+"/"+item.files.three;
+          img5.src = "../casaCuadros/1.png"; // Set the placeholder image URL as the initial src
+          img5.dataset.src = "../"+item.username+"/"+item.files.three;
+          img5.addEventListener("load", function() {
+            // Once the actual image is loaded, update the src attribute
+            img5.src = img5.dataset.src;
+          });
           div6.appendChild(img5);
           let div7 = document.createElement("div");
           div7.classList = "w3-hide-medium w3-hide-small";
           let img6 = document.createElement("img");
           img6.loading = "lazy";
           img6.style = "width:100%";
-          img6.src = "../"+item.username+"/"+item.files.seven;
+          img6.src = "../casaCuadros/1.png"; // Set the placeholder image URL as the initial src
+          img6.dataset.src = "../"+item.username+"/"+item.files.seven;
+          img6.addEventListener("load", function() {
+            // Once the actual image is loaded, update the src attribute
+            img6.src = img6.dataset.src;
+          });
           div7.appendChild(img6);
           div6.appendChild(div7);
           div1.appendChild(div6);
@@ -379,14 +418,24 @@
           let img7= document.createElement("img");
           img7.loading = "lazy";
           img7.style = "width:100%";
-          img7.src = "../"+item.username+"/"+item.files.four;
+          img7.src = "../casaCuadros/1.png"; // Set the placeholder image URL as the initial src
+          img7.dataset.src = "../"+item.username+"/"+item.files.four;
+          img7.addEventListener("load", function() {
+            // Once the actual image is loaded, update the src attribute
+            img7.src = img7.dataset.src;
+          });
           div8.appendChild(img7);
           let div9 = document.createElement("div");
           div9.classList = "w3-hide-medium w3-hide-small";
           let img8 = document.createElement("img");
           img8.loading = "lazy";
           img8.style = "width:100%";
-          img8.src = "../"+item.username+"/"+item.files.eight;
+          img8.src = "../casaCuadros/1.png"; // Set the placeholder image URL as the initial src
+          img8.dataset.src = "../"+item.username+"/"+item.files.eight;
+          img8.addEventListener("load", function() {
+            // Once the actual image is loaded, update the src attribute
+            img8.src = img8.dataset.src;
+          });
           div9.appendChild(img8);
           div8.appendChild(div9);
           div1.appendChild(div8);
