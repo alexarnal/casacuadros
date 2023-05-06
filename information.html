@@ -321,7 +321,7 @@
 																	<div class="text_block_inn">
 																		<div class="text_block_centered " >
 																			<p>
-																				<span style="font-size:64px; --font-size-m:36px; padding-top:36px; color:#fff;">Casa de Cuadros is a space for El Paso photographers to showcase their work. If you are a photographer and are interested in requesting space, you are in the right spot!
+																				<span style="font-size:64px; --font-size-m:36px; padding-top:36px; color:#fff;">Casa de Cuadros is a space for El Paso photographers to showcase their work. If you're a photographer looking for a place to exhibit your work, you've come to the right place.
 																				</span>
 																			</p>
 																		</div>
@@ -362,7 +362,7 @@
           
                                                                     <fieldset id="fs-frm-inputs">
                                                                       <h3>Your Contact Information</h3>
-                                                                      
+                                                                      <p style="color:#fff"> *Required</p>
                                                                       <label for="fullName">Full Name*</label>
                                                                       <input type="text" name="name" class="form-control" style="width:100%;color:#fff" placeholder="First & Last or Company Name" required>
                                                           
@@ -370,7 +370,7 @@
                                                                       <input type="text" name="email" class="form-control" style="width:100%;color:#fff" placeholder="email@domain.tld" required>
                                                                       
                                                                       <label for="dontDisplayEmail" style="vertical-align: top;"> 
-                                                                        <input type="checkbox" name="dontDisplayEmail" class="form-control" style="vertical-align: -8pt;">&nbsp; Do not display email
+                                                                        <input type="checkbox" name="displayEmailonPublicProfile" class="form-control" style="vertical-align: -8pt;">&nbsp; Display Email Address on Public Profilie
                                                                       </label>
                                                                       <br><br>
                                                                       <label for="address">Address</label>
@@ -394,12 +394,12 @@
                                                                       <label for="otherContact">Other Contact</label>
                                                                       <input type="text" name="otherContact" class="form-control" style="width:100%;color:#fff" placeholder="linktr.ee, YouTube, etc.">
                                                                       
-                                                                      <label for="logo">Logo<a style="font-size: 9px">(max size: 25MB)</a></label>
+                                                                      <!-- <label for="logo">Logo<a style="font-size: 9px">(max size: 25MB)</a></label>
                                                                       <input type="file" accept="image/png, image/jpeg" name="logo" class="form-control" style="color: rgba(130,130,130,1.00);width:100%"> 
                                                                       
                                                                       <label for="displayLogo"> 
                                                                         <input type="checkbox" name="displayLogo" class="form-control" style="vertical-align: -8pt;">&nbsp; Display logo instead of name
-                                                                      </label>
+                                                                      </label> -->
                                                                       
                                                                       <br><br><br>
                                                                       <h3>Your Work</h3>
@@ -420,14 +420,17 @@
                                                                       <label for="im8">Image 8* <a style="font-size: 9px">(max size: 25MB)</a></label>
                                                                       <input type="file" accept="image/png, image/jpeg" name="im8" class="form-control" style="color: rgba(130,130,130,1.00);width:100%" required>
                                                           
-                                                                      <label for="randomize"> 
+                                                                      <!-- <label for="randomize"> 
                                                                         <input type="checkbox" name="randomize" class="form-control" style="vertical-align: -8pt;">&nbsp; Randomize order
-                                                                      </label>
+                                                                      </label> -->
                                                           
-                                                                      <hr > 
-                                                                    
-                                                                        <label for="consent"> 
-                                                                            <input type="checkbox" name="consent" class="form-control" style="vertical-align: -8pt;" required>&nbsp; I accept the <a href="#" id="openModal">Terms & Conditions.</a>
+                                                                      <!-- <hr >  -->
+                                                                      <br><br><br>
+                                                                      <h3>Terms & Conditions</h3>
+                                                                        <p style="color:#fff">By submitting this form, you agree to the terms and conditions.</p>
+                                                                        <p ><a href="#" id="openModal">Show Terms</a></p>
+                                                                        <label for="sendMeACopy"> 
+                                                                            <input type="checkbox" name="sendMeACopy" class="form-control" style="vertical-align: -8pt;">&nbsp; Sent me a copy of my submission
                                                                         </label>
 
                                                                       <div id="modal" class="modal">
@@ -438,7 +441,7 @@
                                                                             <li>Ownership of Images: <span style="color:gray">You represent and warrant that all images provided by you are your own and that you hold all necessary rights and permissions to use and share such images.</span></li>
                                                                             <li>Accuracy of Contact Information: <span style="color:gray">You acknowledge and agree that all contact information provided by you shall be accurate, complete, and up-to-date, and you shall be solely responsible for any consequences arising from any inaccurate or outdated information provided by you.</span></li>
                                                                             <li>Permission for Display: <span style="color:gray">By providing images and contact information, you grant Casa de Cuadros a non-exclusive, worldwide, royalty-free license to display and use such images and information on their platform, for the purpose of providing the services offered by Casa de Cuadros.</span></li>
-                                                                            <li>Image Cropping: <span style="color:gray">Casa de Cuadros reserves the right, at its sole discretion, to crop or modify images provided by you for display purposes on their platform, if applicable, without any further notice or consent from you.</span></li>
+                                                                            <li>Image Cropping: <span style="color:gray">Casa de Cuadros reserves the right, at its sole discretion, to crop images provided by you for display purposes on their platform, if applicable, without any further notice or consent from you.</span></li>
                                                                             <li>Advertising Use: <span style="color:gray">You represent and warrant that you have obtained all necessary permissions and consents from any individuals depicted in the images provided by you to use such images for advertising purposes on third-party platforms, including but not limited to casacuadros.com, and you shall be solely responsible for any legal issues arising from such use.</span></li>
                                                                             <li>Data Removal and Updates: <span style="color:gray">You may request the removal of your information from Casa de Cuadros at any time by contacting casacdrs@gmail.com. You may also submit a new request to update your information as needed, and Casa de Cuadros will endeavor to process such requests in a timely manner.</span></li>
                                                                             <!-- <li>You can contact <a style="text-decoration-color: black;color:darkgray" href="mailto:casacdrs@gmail.com?subject=Removal Request">casacdrs@gmail.com</a> at any time to remove your information from Casa de Cuadros. </li>
@@ -507,9 +510,10 @@
                                                                 <div class="text_block ux-mod-nobg">
                                                                     <div class="text_block_inn">
                                                                         <div class="text_block_centered " >
-                                                                            <p></p>
-                                                                            <h2 style="font-size: 26px; --font-size-m:20px;">Questions?</h2><br>
-                                                                            <h3 style="font-size: 20px; --font-size-m:16px;">Get in touch!</h3>
+                                                                            
+                                                                            <h2>Questions?</h2><br>
+                                                                            <p style="font-size: 26px; --font-size-m:20px;color:#fff">Get in touch!</p>
+                                                                            
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -553,6 +557,21 @@
                                                                 </form> -->
                                                             </div>
     
+                                                        </div>
+                                                    </div>
+
+                                                    <div id="" class="module col-12 module-id-154650177027" data-module-col="12">
+                                                        <div class="module-inside ">
+                                                            <div class="text_block_out " data-animationend="fadeined" data-effect="standard">
+                                                                <div class="text_block ux-mod-nobg">
+                                                                    <div class="text_block_inn">
+                                                                        <div class="text_block_centered " >
+                                                                            <p style="font-size: 26px; --font-size-m:20px;color:#fff">Or message us at <a href="mailto:casacdrs@gmail.com?subject=Casa%20de%20Cuadros%20Question" >casacdrs@gmail.com</a></p>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
     
