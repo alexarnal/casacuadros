@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-205563571-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-205563571-1');
+    </script>
+    
     <title>Casa de Cuadros</title>
         <!--Meta-->
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
