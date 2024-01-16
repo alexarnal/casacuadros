@@ -83,6 +83,32 @@
             }
         </style>
 
+        <style>
+            .single-image-img {
+                object-fit: cover;
+            }
+            .single-image {
+                position: relative;
+                overflow: hidden;
+            }
+
+            .single-image:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+                opacity: 0;
+                transition: opacity 0.5s;
+            }
+
+            .single-image:hover:after {
+                opacity: 1;
+            }
+        </style>
+
 	</head>
   
     <body class="ux-portfolio-template-default single single-ux-portfolio postid-283  ux-is-galllery-template-body pswp-light-skin responsive-ux navi-hide navi-hide-pop2 hide-menu-desktop show-menu-icon-mobile menu_hover_default page_from_top non_bg_header alt-logo alt-menu default-logo-menu-expand alt-logo-menu-mobile header-sticky-none">
@@ -107,10 +133,13 @@
                             <div class="logo-wrap">
                                 <div id="logo" class="logo">
                                     <a href="https://casacuadros.com/" class="logo-a" title="Casa de Cuadros - El Paso's Premier Photography Showcase" >
-                                        <img alt="Casa de Cuadros Logo" class="logo-image logo-image-default" src="https://casacuadros.com/casacuadros/logo_gray.svg">
-                                        <span class="logo-image-alt" >
+                                        <!-- <img alt="Casa de Cuadros Logo" class="logo-image logo-image-default" src="https://casacuadros.com/casacuadros/logo_gray.svg"> -->
+                                        <svg alt="Casa de Cuadros Logo"  id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="1.8505 1.8262 21.8505 21.8262" stroke="black"><g id="Layer_1_copy_3"><line x1="1.8505" y1="2.2852" x2="21.8505" y2="2.2852" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="1.8505" y1="11.8272" x2="21.8505" y2="11.8272" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="1.8505" y1="21.3692" x2="12.1665" y2="21.3692" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="16.3675" y1="21.3692" x2="21.8505" y2="21.3692" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="21.5225" y1="1.8262" x2="21.5225" y2="12.2882" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="21.5225" y1="16.5952" x2="21.5225" y2="21.8242" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="11.8505" y1="1.8262" x2="11.8505" y2="21.8242" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="2.1725" y1="1.8282" x2="2.1725" y2="21.8262" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="16.6875" y1="7.7802" x2="16.6875" y2="16.5952" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="7.0085" y1="16.5952" x2="7.0085" y2="21.8242" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="7.0085" y1="7.0532" x2="7.0085" y2="12.2822" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="16.2265" y1="16.5952" x2="21.9835" y2="16.5952" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="6.5465" y1="16.6642" x2="11.1585" y2="16.6642" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="6.5475" y1="7.5142" x2="11.1125" y2="7.5142" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="16.6875" y1="7.0532" x2="16.6875" y2="12.2822" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="11.9865" y1="7.5142" x2="16.5515" y2="7.5142" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="16.2265" y1="7.5142" x2="20.7915" y2="7.5142" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/></g></svg>
+                                            
+                                        <!-- <span class="logo-image-alt" >
+                                            <svg alt="Casa de Cuadros Logo"  id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="1.8505 1.8262 21.8505 21.8262" stroke="black"><g id="Layer_1_copy_3"><line x1="1.8505" y1="2.2852" x2="21.8505" y2="2.2852" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="1.8505" y1="11.8272" x2="21.8505" y2="11.8272" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="1.8505" y1="21.3692" x2="12.1665" y2="21.3692" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="16.3675" y1="21.3692" x2="21.8505" y2="21.3692" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="21.5225" y1="1.8262" x2="21.5225" y2="12.2882" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="21.5225" y1="16.5952" x2="21.5225" y2="21.8242" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="11.8505" y1="1.8262" x2="11.8505" y2="21.8242" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="2.1725" y1="1.8282" x2="2.1725" y2="21.8262" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="16.6875" y1="7.7802" x2="16.6875" y2="16.5952" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="7.0085" y1="16.5952" x2="7.0085" y2="21.8242" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="7.0085" y1="7.0532" x2="7.0085" y2="12.2822" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="16.2265" y1="16.5952" x2="21.9835" y2="16.5952" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="6.5465" y1="16.6642" x2="11.1585" y2="16.6642" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="6.5475" y1="7.5142" x2="11.1125" y2="7.5142" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="16.6875" y1="7.0532" x2="16.6875" y2="12.2822" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="11.9865" y1="7.5142" x2="16.5515" y2="7.5142" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/><line x1="16.2265" y1="7.5142" x2="20.7915" y2="7.5142" style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;"/></g></svg>
                                             <img alt="Casa de Cuadros Logo" class="logo-image" src="https://casacuadros.com/casacuadros/logo_gray.svg">
-                                        </span>
+                                        </span> -->
                                     </a>
                                 </div>
                             </div>
@@ -149,9 +178,9 @@
                             <div class="navi-trigger-out navi-trigger-hamburg">
 
                                 <a href="javascript:;" id="navi-trigger" class="navi-trigger">
-                                    <svg class="navi-trigger-svg svg-style02" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 380">
-                                        <g class="svg-style02-line2 svg-style02-line"><rect class="svg-style02-line-rect" width="380" height="50" color="gray"/></g>
-                                        <g class="svg-style02-line1 svg-style02-line"><rect class="svg-style02-line-rect" width="380" height="50" color="gray"/></g>
+                                    <svg class="navi-trigger-svg svg-style02" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 380" style="transform: scale(1.5) translateX(-12px)">
+                                        <g class="svg-style02-line2 svg-style02-line"><rect class="svg-style02-line-rect" width="380" height="25" color="#4d4d4d"/></g>
+                                        <g class="svg-style02-line1 svg-style02-line"><rect class="svg-style02-line-rect" width="380" height="25" color="#4d4d4d"/></g>
                                     </svg>
                                 </a>
 
@@ -253,7 +282,7 @@
                                                 <!--Group module -->
                                                 <!--Hero Image, col-0 means fullwidth-->
 												<div id="" class="module col-0 module-id-1571634062874 bm-wrap row-top row-left" data-module-col="0" data-change-color="off" data-backcolor="transparent" data-frontcolor="" data-logocolor="" data-goto-top="off" data-goto-top-spacing="0" data-groupsameheight="off">
-													<div class="module-inside " style="--height-group:100vh; --height-group-m:50vh; --margin-bottom-mod-m:0px;">
+													<div class="module-inside " style="--height-group:65vh; --height-group-m:78vh; --margin-bottom-mod-m:0px;">
 														<div class="bm-background-img" style="background-image:url(https://casacuadros.com/tonyholguin/cover.jpg);background-attachment:fixed;">
 														</div>
 													</div><!--End module-inside-->
@@ -296,7 +325,7 @@
 																			<div class="text_block_centered " >
 																				<p>
 																					<span style="font-size: 26px;" data-msize="22">
-                                                                                        Discover El Paso's Best Photography–a collection of works that capture the beauty of our city through the lens. Our platform serves as a hub for local photographers to showcase their work and for photography enthusiasts to browse local talent. 
+                                                                                        Photography meets El Paso.
                                                                                     </span>
                                                                                     
 																				</p>
@@ -307,26 +336,7 @@
 															</div>
 														</div><!--End module-->
 
-                                                        <!--Text module-->
-														<div id="" class="module col-9 module-id-1571634064139 col-offset-0" data-module-col="9">
-															<div class="module-inside " style="--margin-bottom-mod-m:20px; padding-top:64px">
-																<div class="text_block_out " data-animationend="fadeined" data-effect="standard">
-																	<div class="text_block ux-mod-nobg">
-																		<div class="text_block_inn">
-																			<div class="text_block_centered " >
-																					<a style="font-size: 26px;" data-msize="22" class="hover-link" href="https://casacuadros.com/photographers" > View Photographers
-                                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle" style="vertical-align: middle;">
-                                                                                                <circle cx="12" cy="12" r="10"></circle>
-                                                                                                <polyline points="12 16 16 12 12 8"></polyline>
-                                                                                                <line x1="8" y1="12" x2="16" y2="12"></line>
-                                                                                            </svg>
-                                                                                    </a>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div><!--End module-->
+                                                        
                                                         
 
 													</div><!--End module-inside-->
@@ -349,6 +359,186 @@
 						</div><!--End content_wrap_outer-->
                     </div><!--End #content-->
 
+                    <!-- Main Content Wrap -->
+        		<div id="wrap" style="clear: both; position: relative" > 
+
+                    <!-- Main Content : portfolio, text content ... -->
+        	        <div id="content">
+						<div id="post-272" class="post-272 page type-page status-publish hentry">
+							<div class="content_wrap_outer fullwrap-layout">
+								<div id="content_wrap" class="">
+									<div class="entry container-fluid container-class">
+
+                                        <!--BM Builder-->
+										<div class="bm-builder clearfix ">
+
+                                            <!--Group module-->
+											<div id="" class="module col-0 module-id-1569214741931 bm-wrap row-top row-equal_spacing_h bm-force-full keep-origin-layout-mobile" data-module-col="0" data-change-color="off">
+												<div class="module-inside ">
+
+                                                    <!--Single image module-->
+													<div id="" class="module col-3 module-id-1569214655238 col-offset-2" data-module-col="3">
+														<div class="module-inside ">
+															<div class="single-image-out  " data-animationend="fadeined">
+																<figure class="single-image  bm-image-mouseover bm-gray-to-colored single-image-full">
+																	<div class="ux-hover-wrap" style="padding-top: 149.84709480122%;">
+																		<a class="ux-hover-wrap-a" href="https://casacuadros.com/bkoveleskie/" target="_self" rel="">
+																			<img alt="Photo by Photographer Bailie Koveleskie" class="single-image-img lazy single_image" src="img/blank.gif" data-src="https://casacuadros.com/bkoveleskie/3.jpg" width="327" height="490" />
+																		</a>
+																	</div>
+																</figure>
+															</div>
+														</div>
+													</div><!--End module-->
+
+                                                    <!--Single image module-->
+													<div id="" class="module col-6 module-id-1569214702626 col-offset-0" data-module-col="6">
+														<div class="module-inside " style="margin-top: 240px; margin-bottom: 120px; --margin-top-mod-m: 90px; --margin-bottom-mod-m: 60px;">
+															<div class="single-image-out  " data-animationend="fadeined">
+																<figure class="single-image  bm-image-mouseover bm-colored-to-gray single-image-full">
+																	<div class="ux-hover-wrap" style="padding-top: 66.555555555556%;">
+																		<a class="ux-hover-wrap-a" href="https://casacuadros.com/tonyholguin/" target="_self" rel="">
+																			<img alt="Photo by Photographer Tony Holguin" class="single-image-img lazy " src="img/blank.gif" data-src="https://casacuadros.com/tonyholguin/6.jpg" width="900" height="599"  />
+																		</a>
+																	</div>
+																</figure>
+															</div>
+														</div>
+													</div><!--End module-->
+
+                                                    <!--Single image module-->
+													<div id="" class="module col-8 module-id-1569219418129 col-offset-2" data-module-col="8">
+														<div class="module-inside " style="margin-top: 0px; margin-bottom: 120px; --margin-top-mod-m: 0px; --margin-bottom-mod-m: 60px;">
+															<div class="single-image-out  " data-animationend="fadeined">
+																<figure class="single-image  bm-image-mouseover bm-gray-to-colored single-image-full">
+																	<div class="ux-hover-wrap" style="padding-top: 50.793650793651%;">
+																		<a class="ux-hover-wrap-a" href="https://casacuadros.com/featured/" target="_self" rel="">
+																			<img alt="Feaured Photo" class="single-image-img lazy " src="img/blank.gif" data-src="https://casacuadros.com/featured/6.jpg" width="1260" height="640"  />
+																		</a>
+																	</div>
+																</figure>
+															</div>
+														</div>
+													</div><!--End module-->
+
+                                                    <!--Single image module-->
+													<div id="" class="module col-6 module-id-1569223416964 col-offset-0" data-module-col="6">
+														<div class="module-inside ">
+															<div class="single-image-out  " data-animationend="fadeined">
+																<figure class="single-image  bm-image-mouseover bm-gray-to-colored single-image-full">
+																	<div class="ux-hover-wrap" style="padding-top: 59.322033898305%;">
+																		<a class="ux-hover-wrap-a" href="https://casacuadros.com/ksteward/" target="_self" rel="">
+																			<img alt="Photo by Photographer Kenneth Steward" class="single-image-img lazy " src="img/blank.gif" data-src="https://casacuadros.com/ksteward/1.jpg" width="885" height="525"  />
+																		</a>
+																	</div>
+																</figure>
+															</div>
+														</div>
+													</div><!--End module-->
+
+                                                    <!--Single image module-->
+													<div id="" class="module col-5 module-id-1569225405100 col-offset-0" data-module-col="5">
+														<div class="module-inside " style="margin-top: 0px; margin-bottom: 120px; --margin-top-mod-m: 0px; --margin-bottom-mod-m: 60px;">
+															<div class="single-image-out  " data-animationend="fadeined">
+																<figure class="single-image  bm-image-mouseover bm-gray-to-colored single-image-full">
+																	<div class="ux-hover-wrap" style="padding-top: 150.64516129032%;">
+																		<a class="ux-hover-wrap-a" href="https://casacuadros.com/featured/" target="_self" rel="">
+																			<img alt="Featured Photo" class="single-image-img lazy " src="img/blank.gif" data-src="https://casacuadros.com/featured/19.jpg" width="620" height="934"  />
+																		</a>
+																	</div>
+																</figure>
+															</div>
+														</div>
+													</div><!--End module-->
+
+                                                    <!--Single image module-->
+													<div id="" class="module col-8 module-id-156922546179 col-offset-2" data-module-col="8">
+														<div class="module-inside " style="margin-top: 0px; margin-bottom: 80px; --margin-top-mod-m: 0px; --margin-bottom-mod-m: 40px;">
+															<div class="single-image-out  " data-animationend="fadeined">
+																<figure class="single-image  bm-image-mouseover bm-gray-to-colored single-image-full">
+																	<div class="ux-hover-wrap" style="padding-top: 66.642857142857%;">
+																		<a class="ux-hover-wrap-a" href="https://casacuadros.com/bkoveleskie/" target="_self" rel="">
+																			<img alt="Photo by Photographer Bailie Koveleskie" class="single-image-img lazy " src="img/blank.gif" data-src="https://casacuadros.com/bkoveleskie/6.jpg" width="1400" height="933"  />
+																		</a>
+																	</div>
+																</figure>
+															</div>
+														</div>
+													</div><!--End module-->
+
+												</div><!--End module-inside-->
+											</div><!--End module .bm-wrap-->
+
+                                            <!--Group module-->
+											<div id="" class="module col-12 module-id-1569291374502 bm-wrap row-top row-left bm-wrap-height-auto" data-module-col="12" data-change-color="on" data-backcolor="#000000" data-frontcolor="#ffffff" data-logocolor="default-logo-univer" data-goto-top="off" data-goto-top-spacing="0" data-groupsameheight="off">
+												<div class="module-inside " style="margin-top: 80px; margin-bottom: 0px; --margin-top-mod-m: 60px; --margin-bottom-mod-m: 0px;">
+
+                                                    <!--Text module-->
+													<div id="" class="module col-8 module-id-1569288917892 col-offset-2" data-module-col="8">
+														<div class="module-inside " style="margin-top: 0px; margin-bottom: 100px; --margin-top-mod-m: 0px; --margin-bottom-mod-m: 50px;">
+															<div class="text_block_out " data-animationend="fadeined" data-effect="standard">
+																<div class="text_block ux-mod-nobg">
+																	<div class="text_block_inn">
+																		<div class="text_block_centered " >
+																			<p style="text-align: center; line-height: 1.2;">
+																				<span style="font-size: 96px; --font-size-m:50px; ">Want to create something?
+																				</span>
+																			</p>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div><!--End module-->
+
+                                                    <!--Text module-->
+													<div id="" class="module col-6 module-id-1569289097636 col-offset-3" data-module-col="6">
+														<div class="module-inside ">
+															<div class="text_block_out " data-animationend="fadeined" data-effect="standard">
+																<div class="text_block ux-mod-nobg">
+																	<div class="text_block_inn">
+																		<div class="text_block_centered "  style="margin-top: 0px; margin-bottom: 200px; --margin-top-mod-m: 0px; --margin-bottom-mod-m: 180px;">
+																			<p style="text-align: center; ">
+																				<a style="font-size: 32px; --font-size-m:26px;" href="https://casacuadros.com/photographers">
+																					<u>Find Your Photographer</u>
+																				</a>
+																			</p>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div><!--End module-->
+
+												</div><!--End module-inside-->
+											</div><!--End module .bm-wrap -->
+
+										</div><!--End bm-builder-->
+										<div class="clear"></div>
+
+									</div><!--End entry-->
+								</div><!--End content_wrap-->
+							</div><!--End content_wrap_outer-->
+						</div><!--end #postID-->
+                    </div><!--End #content-->
+
+                    <!-- Footer -->
+                    <!-- <footer id="footer" class="footer-cols-layout footer-cols-layout-mobile">
+
+                        <div class="footer-info footer-horizon-left footer-horizon-left-mobile">
+                            
+                            <div class="container-fluid">
+
+                                <div class="footer-cols-item footer-cols-item-mobile">
+
+                                    <div class="copyright"><a href="https://www.seateme.net" title="Designed by SeaTheme">Designed by SeaTheme</a> - Do what is great.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer> -->
+
+                </div><!--End #wrap -->
+                
                     <!-- Footer -->
                     <footer id="footer" class="footer-cols-layout footer-cols-layout-mobile">
 
@@ -357,7 +547,7 @@
                             <div class="container-fluid">
 
                                 <div class="footer-cols-item footer-cols-item-mobile">
-                                    <div class="copyright">&copy; 2023 <a class="hover-link" href="https://casacuadros.com/" style="text-decoration:none"> Casa de Cuadros </a> | Photo by <a class="hover-link" href="https://casacuadros.com/tonyholguin">Tony Holguin</a></div>
+                                    <div class="copyright">&copy; 2023 <a class="hover-link" href="https://casacuadros.com/" style="text-decoration:none"> Casa de Cuadros </a> | Cover Photo by <a class="hover-link" href="https://casacuadros.com/tonyholguin">Tony Holguin</a></div>
 
 
                                 </div>
