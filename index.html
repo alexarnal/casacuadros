@@ -112,6 +112,65 @@
         .single-image:hover:after {
             opacity: 1;
         }
+        .bm-background-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+/* .text-overlay {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  text-align: left;
+  color: #313139;
+  z-index: 1;
+} */
+.text-overlay {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  text-align: left;
+  color: #4d4d4d; /* 313139; Initial text color */
+  opacity: 1;
+  transition: opacity 0.5s ease, color 0.5s ease;
+}
+
+.text-overlay.fade-out {
+  opacity: 0;
+}
+
+.bm-background-img:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/* .transparent-gradient {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 1) 100%);
+} */
+
+.cover-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
+.bm-background-img {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
     </style>
 
 </head>
@@ -246,91 +305,18 @@
 
                                             <!--Group module -->
                                             <!--Hero Image, col-0 means fullwidth-->
-                                            <div id=""
-                                                class="module col-0 module-id-1571634062874 bm-wrap row-top row-left"
-                                                data-module-col="0" data-change-color="off" data-backcolor="transparent"
-                                                data-frontcolor="" data-logocolor="" data-goto-top="off"
-                                                data-goto-top-spacing="0" data-groupsameheight="off">
-                                                <div class="module-inside "
-                                                    style="--height-group:65vh; --height-group-m:78vh; --margin-bottom-mod-m:0px;">
-                                                    <div class="bm-background-img"
-                                                        style="background-image:url(https://casacuadros.com/tonyholguin/cover.jpg);background-attachment:fixed;">
-                                                    </div>
-                                                </div><!--End module-inside-->
-                                            </div><!--End module-->
-
-                                            <!--Group module-->
-                                            <div id=""
-                                                class="module col-12 module-id-1571634063406 bm-wrap row-top row-left"
-                                                data-module-col="12" data-change-color="off"
-                                                data-backcolor="transparent" data-frontcolor="" data-logocolor=""
-                                                data-goto-top="off" data-goto-top-spacing="0" data-groupsameheight="">
-                                                <div class="module-inside "
-                                                    style=" margin-top:100px; margin-bottom:40px; --margin-top-mod-m:20px; --margin-bottom-mod-m:20px;">
-
-                                                    <!--Text module-->
-                                                    <div id=""
-                                                        class="module col-12 module-id-1571634063638 col-offset-0"
-                                                        data-module-col="12">
-                                                        <div class="module-inside ">
-                                                            <div class="text_block_out " data-animationend="fadeined"
-                                                                data-effect="mask">
-                                                                <div class="text_block withbg background_image">
-                                                                    <div class="  bm-text-bgimg-mask">
-                                                                        <div class="text_block_inn">
-                                                                            <div class="text_block_centered "
-                                                                                style="--text-mask-background-image:url(https://casacuadros.com/tonyholguin/cover.jpg)">
-                                                                                <!--It should be fully address URL-->
-                                                                                <h1 style="--font-size-m:36px;">Casa de
-                                                                                    Cuadros</h1>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                            <div id="" class="module col-0 module-id-1571634062874 bm-wrap row-top row-left" data-module-col="0" data-change-color="off" data-backcolor="transparent" data-frontcolor="" data-logocolor="" data-goto-top="off" data-goto-top-spacing="0" data-groupsameheight="off">
+                                                <div class="module-inside" style="--height-group:100vh; --height-group-m:100vh; --margin-bottom-mod-m:0px;">
+                                                    <div class="">
+                                                        <div class="bm-background-img" style="background-image:url(https://casacuadros.com/tonyholguin/cover.jpg);background-attachment:fixed;">
+                                                          <div class="text-overlay" >
+                                                            <h1><span style="font-size: 48px;color:#4d4d4d"data-msize="22">Casa de Cuadros</span></h1>
+                                                            <p><span style="font-size: 26px;color:#4d4d4d" data-msize="22">Photography meets El Paso</span></p>
+                                                          </div>
                                                         </div>
-                                                    </div><!--End module-->
-
-                                                </div><!--End module-inside-->
-                                            </div><!--End module-->
-
-                                            <!--Group module-->
-                                            <div id=""
-                                                class="module col-12 module-id-1571634063927 bm-wrap row-middle row-left bm-wrap-height-auto"
-                                                data-module-col="12" data-change-color="off"
-                                                data-backcolor="transparent" data-frontcolor="" data-logocolor=""
-                                                data-goto-top="off" data-goto-top-spacing="0" data-groupsameheight="">
-                                                <div class="module-inside "
-                                                    style="margin-bottom:120px; --margin-bottom-mod-m:60px; ">
-
-                                                    <!--Text module-->
-                                                    <div id="" class="module col-9 module-id-1571634064139 col-offset-0"
-                                                        data-module-col="9">
-                                                        <div class="module-inside " style="--margin-bottom-mod-m:20px;">
-                                                            <div class="text_block_out " data-animationend="fadeined"
-                                                                data-effect="standard">
-                                                                <div class="text_block ux-mod-nobg">
-                                                                    <div class="text_block_inn">
-                                                                        <div class="text_block_centered ">
-                                                                            <p>
-                                                                                <span style="font-size: 26px;"
-                                                                                    data-msize="22">
-                                                                                    Photography meets El Paso.
-                                                                                </span>
-
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div><!--End module-->
-
-
-
-
-                                                </div><!--End module-inside-->
-                                            </div><!--End module-->
+                                                      </div>
+                                                </div>
+                                              </div>
 
 
 
@@ -363,9 +349,8 @@
                                         <div class="bm-builder clearfix ">
 
                                             <!--Group module-->
-                                            <div id=""
-                                                class="module col-0 module-id-1569214741931 bm-wrap row-top row-equal_spacing_h bm-force-full keep-origin-layout-mobile"
-                                                data-module-col="0" data-change-color="off">
+                                            <div id="" class="module col-0 module-id-1569214741931 bm-wrap row-top row-equal_spacing_h bm-force-full keep-origin-layout-mobile" data-module-col="0" data-change-color="off" style="margin-top: 200px;">
+                                                
                                                 <div class="module-inside ">
 
                                                     <!--Single image module-->
@@ -528,7 +513,7 @@
                                             <!--Group module-->
                                             <div id=""
                                                 class="module col-12 module-id-1569291374502 bm-wrap row-top row-left bm-wrap-height-auto"
-                                                data-module-col="12" data-change-color="on" data-backcolor="#000000"
+                                                data-module-col="12" data-change-color="on" data-backcolor="#111111"
                                                 data-frontcolor="#ffffff" data-logocolor="default-logo-univer"
                                                 data-goto-top="off" data-goto-top-spacing="0"
                                                 data-groupsameheight="off">
@@ -668,6 +653,24 @@
     <!-- Theme main js -->
     <script src='js/custom.theme.js'></script>
 
+    <script>
+        document.addEventListener('scroll', function() {
+  var textOverlay = document.querySelector('.text-overlay');
+  var scrollPosition = window.scrollY;
+  var targetPosition = 600; // Adjust as needed, depending on when you want the fade effect to start
+
+  if (scrollPosition > targetPosition) {
+    var opacity = 1 - ((scrollPosition - targetPosition) / 300); // Adjust the denominator for faster or slower fade
+    var colorValue = 255 - Math.min((scrollPosition - targetPosition), 255); // Ensure colorValue stays within 0-255
+
+    textOverlay.style.opacity = opacity;
+    textOverlay.style.color = `rgb(${colorValue}, ${colorValue}, ${colorValue})`; // Gradually turn to white
+  } else {
+    textOverlay.style.opacity = 1;
+    textOverlay.style.color = '#313139'; // Initial text color
+  }
+});
+    </script>
 </body>
 
 </html>
