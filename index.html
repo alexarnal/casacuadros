@@ -120,16 +120,6 @@
   height: 100vh;
   z-index: -1;
 }
-
-/* .text-overlay {
-  position: fixed;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-  text-align: left;
-  color: #313139;
-  z-index: 1;
-} */
 .text-overlay {
   position: fixed;
   top: 50%;
@@ -139,6 +129,15 @@
   color: #4d4d4d; /* 313139; Initial text color */
   opacity: 1;
   transition: opacity 0.5s ease, color 0.5s ease;
+}
+
+.text-overlay h1 {
+    color: inherit; /* This makes the h1 tag inherit the color from its parent, .text-overlay */
+    font-size: 2em;
+}
+.text-overlay p {
+    color: inherit; /* This makes the p tag inherit the color from its parent, .text-overlay */
+    font-size: 1em;
 }
 
 .text-overlay.fade-out {
@@ -154,9 +153,6 @@
   height: 100%;
   background-color: rgba(255, 255, 255, 0.5);
 }
-/* .transparent-gradient {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 1) 100%);
-} */
 
 .cover-container {
   position: relative;
@@ -195,49 +191,7 @@
                     <div class="navi-logo">
                         <div class="logo-wrap">
                             <div id="logo" class="logo">
-                                <a href="https://casacuadros.com/" class="logo-a"
-                                    title="Casa de Cuadros - El Paso's Premier Photography Showcase">
-                                    <!-- <img alt="Casa de Cuadros Logo" class="logo-image logo-image-default" src="https://casacuadros.com/casacuadros/logo_gray.svg"> -->
-                                    <svg alt="Casa de Cuadros Logo" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                        width="50" height="50" viewBox="1.8505 1.8262 21.8505 21.8262" stroke="black">
-                                        <g id="Layer_1_copy_3">
-                                            <line x1="1.8505" y1="2.2852" x2="21.8505" y2="2.2852"
-                                                style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;" />
-                                            <line x1="1.8505" y1="11.8272" x2="21.8505" y2="11.8272"
-                                                style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;" />
-                                            <line x1="1.8505" y1="21.3692" x2="12.1665" y2="21.3692"
-                                                style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;" />
-                                            <line x1="16.3675" y1="21.3692" x2="21.8505" y2="21.3692"
-                                                style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;" />
-                                            <line x1="21.5225" y1="1.8262" x2="21.5225" y2="12.2882"
-                                                style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;" />
-                                            <line x1="21.5225" y1="16.5952" x2="21.5225" y2="21.8242"
-                                                style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;" />
-                                            <line x1="11.8505" y1="1.8262" x2="11.8505" y2="21.8242"
-                                                style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;" />
-                                            <line x1="2.1725" y1="1.8282" x2="2.1725" y2="21.8262"
-                                                style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;" />
-                                            <line x1="16.6875" y1="7.7802" x2="16.6875" y2="16.5952"
-                                                style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;" />
-                                            <line x1="7.0085" y1="16.5952" x2="7.0085" y2="21.8242"
-                                                style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;" />
-                                            <line x1="7.0085" y1="7.0532" x2="7.0085" y2="12.2822"
-                                                style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;" />
-                                            <line x1="16.2265" y1="16.5952" x2="21.9835" y2="16.5952"
-                                                style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;" />
-                                            <line x1="6.5465" y1="16.6642" x2="11.1585" y2="16.6642"
-                                                style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;" />
-                                            <line x1="6.5475" y1="7.5142" x2="11.1125" y2="7.5142"
-                                                style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;" />
-                                            <line x1="16.6875" y1="7.0532" x2="16.6875" y2="12.2822"
-                                                style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;" />
-                                            <line x1="11.9865" y1="7.5142" x2="16.5515" y2="7.5142"
-                                                style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;" />
-                                            <line x1="16.2265" y1="7.5142" x2="20.7915" y2="7.5142"
-                                                style="fill:none; stroke:#4d4d4d; stroke-miterlimit:10; stroke-width:.923px;" />
-                                        </g>
-                                    </svg>
-                                </a>
+                                
                             </div>
                         </div>
                     </div>
@@ -252,10 +206,10 @@
                                 <svg class="navi-trigger-svg svg-style02" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 380 380" style="transform: scale(1.5) translateX(-12px)">
                                     <g class="svg-style02-line2 svg-style02-line">
-                                        <rect class="svg-style02-line-rect" width="380" height="25" color="#4d4d4d" />
+                                        <rect class="svg-style02-line-rect" width="380" height="25" color=#4d4d4d />
                                     </g>
                                     <g class="svg-style02-line1 svg-style02-line">
-                                        <rect class="svg-style02-line-rect" width="380" height="25" color="#4d4d4d" />
+                                        <rect class="svg-style02-line-rect" width="380" height="25" color=#4d4d4d />
                                     </g>
                                 </svg>
                             </a>
@@ -310,8 +264,8 @@
                                                     <div class="">
                                                         <div class="bm-background-img" style="background-image:url(https://casacuadros.com/tonyholguin/cover.jpg);background-attachment:fixed;">
                                                           <div class="text-overlay" >
-                                                            <h1><span style="font-size: 48px;color:#4d4d4d; --font-size-m: 36px" data-msize="22">Casa de Cuadros</span></h1>
-                                                            <p><span style="font-size: 26px;color:#4d4d4d; --font-size-m:18px" data-msize="22">Photography meets El Paso</span></p>
+                                                            <h1>Casa de Cuadros</h1>
+                                                            <p>Photography meets El Paso</p>
                                                           </div>
                                                         </div>
                                                       </div>
@@ -368,7 +322,7 @@
                                                                             target="_self" rel="">
                                                                             <img alt="Photo by Photographer Bailie Koveleskie"
                                                                                 class="single-image-img lazy single_image"
-                                                                                src="img/blank.gif"
+                                                                                src="casacuadros/blank.gif"
                                                                                 data-src="https://casacuadros.com/bkoveleskie/3.jpg"
                                                                                 width="327" height="490" />
                                                                         </a>
@@ -394,7 +348,7 @@
                                                                             target="_self" rel="">
                                                                             <img alt="Photo by Photographer Tony Holguin"
                                                                                 class="single-image-img lazy "
-                                                                                src="img/blank.gif"
+                                                                                src="casacuadros/blank.gif"
                                                                                 data-src="https://casacuadros.com/tonyholguin/6.jpg"
                                                                                 width="900" height="599" />
                                                                         </a>
@@ -420,7 +374,7 @@
                                                                             target="_self" rel="">
                                                                             <img alt="Feaured Photo"
                                                                                 class="single-image-img lazy "
-                                                                                src="img/blank.gif"
+                                                                                src="casacuadros/blank.gif"
                                                                                 data-src="https://casacuadros.com/featured/6.jpg"
                                                                                 width="1260" height="640" />
                                                                         </a>
@@ -445,7 +399,7 @@
                                                                             target="_self" rel="">
                                                                             <img alt="Photo by Photographer Kenneth Steward"
                                                                                 class="single-image-img lazy "
-                                                                                src="img/blank.gif"
+                                                                                src="casacuadros/blank.gif"
                                                                                 data-src="https://casacuadros.com/ksteward/1.jpg"
                                                                                 width="885" height="525" />
                                                                         </a>
@@ -471,7 +425,7 @@
                                                                             target="_self" rel="">
                                                                             <img alt="Featured Photo"
                                                                                 class="single-image-img lazy "
-                                                                                src="img/blank.gif"
+                                                                                src="casacuadros/blank.gif"
                                                                                 data-src="https://casacuadros.com/featured/19.jpg"
                                                                                 width="620" height="934" />
                                                                         </a>
@@ -497,7 +451,7 @@
                                                                             target="_self" rel="">
                                                                             <img alt="Photo by Photographer Bailie Koveleskie"
                                                                                 class="single-image-img lazy "
-                                                                                src="img/blank.gif"
+                                                                                src="casacuadros/blank.gif"
                                                                                 data-src="https://casacuadros.com/bkoveleskie/6.jpg"
                                                                                 width="1400" height="933" />
                                                                         </a>
@@ -657,10 +611,10 @@
         document.addEventListener('scroll', function() {
   var textOverlay = document.querySelector('.text-overlay');
   var scrollPosition = window.scrollY;
-  var targetPosition = 600; // Adjust as needed, depending on when you want the fade effect to start
+  var targetPosition = 0; // Adjust as needed, depending on when you want the fade effect to start
 
   if (scrollPosition > targetPosition) {
-    var opacity = 1 - ((scrollPosition - targetPosition) / 300); // Adjust the denominator for faster or slower fade
+    var opacity = 1 - ((scrollPosition - targetPosition) / 100); // Adjust the denominator for faster or slower fade
     var colorValue = 255 - Math.min((scrollPosition - targetPosition), 255); // Ensure colorValue stays within 0-255
 
     textOverlay.style.opacity = opacity;
