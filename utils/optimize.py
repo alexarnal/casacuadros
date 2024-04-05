@@ -3,7 +3,7 @@ import io
 from PIL import Image
 from shutil import rmtree
 
-def adjust_quality_to_target(file_path, target_size_kb, tolerance_kb=100, initial_quality=85):
+def adjust_quality_to_target(file_path, target_size_kb, tolerance_kb=100, initial_quality=100):
     target_size_bytes = target_size_kb * 1024
     tolerance_bytes = tolerance_kb * 1024
     quality = initial_quality
@@ -16,15 +16,14 @@ def adjust_quality_to_target(file_path, target_size_kb, tolerance_kb=100, initia
             size_bytes = output_io.tell()
 
             if target_size_bytes - tolerance_bytes <= size_bytes <= target_size_bytes + tolerance_bytes:
+                print(f"Final size: {size_bytes / 1024:.2f} KB")
                 break
-            elif size_bytes < target_size_bytes - tolerance_bytes:
-                quality = min(quality + 1, 95)  # Avoid going over 95
+            elif quality > 10:  # Avoid going under 10
+                print(f"Quality: {quality}, Size: {size_bytes / 1024:.2f} KB")
+                quality -= 1  # Decrease quality by 1
             else:
-                quality = max(quality - 1, 10)  # Avoid going under 10
-
-            # Break if quality adjustments are ineffective
-            if quality == 95 or quality == 10:
-                break
+                print("Minimum quality reached")
+                break  # Stop if minimum quality is reached
 
     return output_io.getvalue(), quality
 
@@ -35,7 +34,7 @@ def process_images(input_folder, output_folder, target_size_kb=1000, tolerance_k
 
     count = 0
     for filename in os.listdir(input_folder):
-        if filename.lower().endswith('.jpg'):
+        if filename.lower().endswith('.jpg') or filename.lower().endswith('.jpeg'):
             count += 1
             file_path = os.path.join(input_folder, filename)
             output_path = os.path.join(output_folder, f'{count}.jpg')
